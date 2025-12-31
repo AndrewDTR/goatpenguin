@@ -30,14 +30,6 @@
 		}
 	}
 
-	function checkAnswer(ans: string) {
-		if (ans.toLowerCase() == article.toLowerCase()) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 	function handleAnswer(e: SubmitEvent) {
 		e.preventDefault();
 
@@ -47,7 +39,7 @@
 			localStorage.setItem(day, JSON.stringify({ revealed, gameState }));
 		}
 
-		if (acceptedGuesses.includes(answer.replaceAll("'", ''))) {
+		if (acceptedGuesses.includes(answer.replaceAll("'", '').toLowerCase())) {
 			gameState = 'win';
 
 			if (browser) {
