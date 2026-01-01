@@ -1,11 +1,11 @@
 /** @type {import('./$types').PageLoad} */
 export async function load() {
-    const article = "Times_Square_Ball";
-    const friendly = "Times Square Ball";
-    const acceptedGuesses = ["times square ball", "ball drop", "times square ball drop", "new years eve ball drop", "new years ball drop"];
-    const day = "day1";
+    const article = "The_Stanley_Parable";
+    const friendly = "The Stanley Parable";
+    const acceptedGuesses = ["the stanley parable", "the stanly parable", "stanley parable", "stanly parable"];
+    const day = "day2";
 
-    const categories = ["December", "Winter traditions", "Culture of New York City", "Festivals established in 1907", "New Year in the United States"]
+    const categories = ["2011 video games", "First-person adventure games", "Fiction with unreliable narrators", "Self-reflexive video games", "Office work in popular culture"]
 
     return {
         article,
