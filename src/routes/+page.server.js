@@ -1,4 +1,3 @@
-/** @type {import('./$types').PageLoad} */
 export async function load() {
     const article = "The_Stanley_Parable";
     const friendly = "The Stanley Parable";
