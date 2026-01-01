@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	let { data } = $props();
-	let { day, acceptedGuesses, article, friendly, categories } = $derived(data);
+	let { day, acceptedGuesses, dayNum, article, friendly, categories } = $derived(data);
 
 	const bgClass: Record<number, string> = {
 		100: 'bg-indigo-100 border-indigo-200',
@@ -60,7 +60,7 @@
 	}
 
 	async function copy() {
-		let text = 'https://gp.dtr.lol\n\n';
+		let text = `goatpenguin #${dayNum} ${gameState == "win" ? (revealed - 1) : "X"}/5 \nhttps://gp.dtr.lol\n\n`;
 
 		for (let i = 1; i < 6; i++) {
 			if (revealed > i) {

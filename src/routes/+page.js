@@ -4,6 +4,7 @@ export async function load() {
     const friendly = "The Stanley Parable";
     const acceptedGuesses = ["the stanley parable", "the stanly parable", "stanley parable", "stanly parable"];
     const day = "day2";
+    const dayNum = 2;
 
     const categories = ["2011 video games", "First-person adventure games", "Fiction with unreliable narrators", "Self-reflexive video games", "Office work in popular culture"]
 
@@ -12,6 +13,7 @@ export async function load() {
         friendly,
         categories,
         day,
+        dayNum,
         acceptedGuesses
     };
 }
