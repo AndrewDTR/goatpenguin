@@ -19,6 +19,7 @@
 	let gameState = $state('guessing');
 	let answer = $state('');
 	let guesses: string[] = $state([]);
+	let copied = $state(false);
 
 	if (browser) {
 		const dayJSON = localStorage.getItem(day);
@@ -84,6 +85,7 @@
 		}
 
 		await navigator.clipboard.writeText(text);
+		copied = true;
 	}
 </script>
 
@@ -106,9 +108,15 @@
 		</div>
 
 		<p class="mt-4 text-white">
-			My attempt at a game that's something in between <a
+			My attempt at a daily game that's something in between <a
+				class="inline-block bg-linear-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent underline hover:italic"
 				href="https://www.linkedin.com/games/pinpoint">Pinpoint</a
-			> and Catfishing. Can you guess the Wikipedia article given five of its article categories (in decreasing
+			>
+			and
+			<a
+				class="inline-block bg-linear-to-r from-amber-400 to-green-300 bg-clip-text text-transparent underline hover:italic"
+				href="https://catfishing.net/">Catfishing</a
+			>. Can you guess the Wikipedia article given five of its article categories (in decreasing
 			difficulty)?
 		</p>
 
@@ -149,8 +157,8 @@
 			<p class="mt-2 text-xl font-bold text-white">Correct article: <i>{friendly}</i></p>
 			<button
 				onclick={copy}
-				class="mt-2 h-12 w-64 cursor-pointer border border-purple-700 bg-purple-900 text-white"
-				>Copy game result to clipboard</button
+				class="active:border-purple:800 mt-2 h-12 w-64 cursor-pointer border border-purple-700 bg-purple-900 text-white hover:border-purple-800 hover:bg-purple-950 active:bg-purple-600"
+				>{copied ? 'Copied to clipboard! 📋' : 'Copy game result to clipboard'}</button
 			>
 		{:else if gameState === 'loss'}
 			<div
@@ -162,8 +170,8 @@
 			<p class="mt-2 text-xl font-bold text-white">Correct article: <i>{friendly}</i></p>
 			<button
 				onclick={copy}
-				class="mt-2 h-12 w-64 cursor-pointer border border-purple-700 bg-purple-900 text-white"
-				>Copy game result to clipboard</button
+				class="active:border-purple:800 mt-2 h-12 w-64 cursor-pointer border border-purple-700 bg-purple-900 text-white hover:border-purple-800 hover:bg-purple-950 active:bg-purple-600"
+				>{copied ? 'Copied to clipboard! 📋' : 'Copy game result to clipboard'}</button
 			>
 		{/if}
 	</div>
