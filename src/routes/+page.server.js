@@ -1,11 +1,16 @@
 export async function load() {
-    const article = "The_Stanley_Parable";
-    const friendly = "The Stanley Parable";
-    const acceptedGuesses = ["the stanley parable", "the stanly parable", "stanley parable", "stanly parable"];
-    const day = "day2";
-    const dayNum = 2;
+    const article = "Tamagotchi";
+    const friendly = "Tamagotchi";
+    const acceptedGuesses = ["tamogachi", "tamagachi", "tamagatchi", "tamagachi", "tamagotchi"];
+    const day = "day3";
+    const dayNum = 3;
 
-    const categories = ["2011 video games", "First-person adventure games", "Fiction with unreliable narrators", "Self-reflexive video games", "Office work in popular culture"]
+    const categories = ["1996 establishments in Japan",
+        "2000s fads and trends",
+        "Bandai Namco Entertainment franchises",
+        "Fictional extraterrestrial species and races",
+        "Handheld virtual pets"
+    ]
 
     return {
         article,

@@ -60,7 +60,7 @@
 	}
 
 	async function copy() {
-		let text = `goatpenguin #${dayNum} ${gameState == "win" ? (revealed - 1) : "X"}/5 \nhttps://gp.dtr.lol\n\n`;
+		let text = `goatpenguin #${dayNum} ${gameState == 'win' ? revealed - 1 : 'X'}/5 \nhttps://gp.dtr.lol\n\n`;
 
 		for (let i = 1; i < 6; i++) {
 			if (revealed > i) {
@@ -84,18 +84,22 @@
 	}
 </script>
 
-<div class="flex min-h-screen w-full justify-center">
+<div class="flex min-h-screen w-full flex-wrap justify-center">
 	<div class="m-4 flex max-w-3xl flex-col">
 		<div
-			class="flex h-20 items-center justify-center gap-2 border border-indigo-800 bg-indigo-950 p-2"
+			class="flex h-auto flex-wrap items-center justify-center gap-2
+         border border-indigo-800 bg-indigo-950 p-2
+         sm:h-20 sm:flex-nowrap"
 		>
 			<img
-				class="h-20 w-20 object-cover"
+				class="h-12 w-12 object-cover sm:h-20 sm:w-20"
 				src="/goatpenguin.png"
 				alt="Goat with a penguin shirt on"
 			/>
-			<p class="-translate-y-2 text-6xl leading-none font-bold text-white">goatpenguin</p>
-			<p class="font-bold text-white">by Draw</p>
+
+			<p class="min-w-0 text-4xl leading-none font-bold text-white sm:text-6xl">goatpenguin</p>
+
+			<p class="shrink-0 font-bold text-white">by Draw</p>
 		</div>
 
 		<p class="mt-4 text-white">
@@ -117,7 +121,12 @@
 			</div>
 
 			<form class="mt-4 w-full" onsubmit={handleAnswer}>
-				<input bind:value={answer} class="block h-12 w-full" placeholder="Place your guess here" />
+				<input
+					bind:value={answer}
+					required
+					class="block h-12 w-full"
+					placeholder="Place your guess here"
+				/>
 			</form>
 		{:else if gameState === 'win'}
 			<div
