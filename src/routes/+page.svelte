@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
+	import { stringSimilarity } from 'string-similarity-js';
+
 	let { data } = $props();
 	let { day, acceptedGuesses, dayNum, article, friendly, categories } = $derived(data);
 
@@ -44,7 +46,10 @@
 			localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
 		}
 
-		if (acceptedGuesses.includes(answer.replaceAll("'", '').toLowerCase())) {
+		if (
+			acceptedGuesses.includes(answer.replaceAll("'", '').toLowerCase()) ||
+			stringSimilarity(friendly.toLowerCase(), answer.toLowerCase()) >= 0.7
+		) {
 			gameState = 'win';
 
 			if (browser) {
@@ -103,7 +108,11 @@
 				alt="Goat with a penguin shirt on"
 			/>
 
-			<p class="min-w-0 text-4xl leading-none font-bold text-white sm:text-6xl">goatpenguin</p>
+			<p
+				class="inline-block min-w-0 -translate-y-1 bg-linear-to-r from-indigo-200 to-indigo-400 bg-clip-text text-4xl leading-[1.15] font-bold text-transparent sm:text-6xl"
+			>
+				goatpenguin
+			</p>
 
 			<p class="shrink-0 font-bold text-white">by Draw</p>
 		</div>
