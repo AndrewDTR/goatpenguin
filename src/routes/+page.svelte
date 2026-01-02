@@ -117,7 +117,7 @@
 			<a
 				class="inline-block bg-linear-to-r from-amber-400 to-green-300 bg-clip-text text-transparent underline hover:italic"
 				href="https://catfishing.net/">Catfishing</a
-			>. Can you guess the Wikipedia article given five of its article categories (in decreasing
+			>. Can you guess the Wikipedia article given five of its categories (in decreasing
 			difficulty)?
 		</p>
 
