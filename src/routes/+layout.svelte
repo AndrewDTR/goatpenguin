@@ -16,7 +16,7 @@
 	/>
 	<meta property="og:image:width" content="400" />
 	<meta property="og:image:height" content="400" />
-	<meta name="theme-color" content="#" />
+	<meta name="theme-color" content="#282828" />
 	<title>goatpenguin 🐐🐧</title>
 </svelte:head>
 {@render children()}
