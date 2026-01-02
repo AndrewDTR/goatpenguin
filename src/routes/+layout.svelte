@@ -14,8 +14,8 @@
 		property="og:description"
 		content="A guessing game for fans of trivia, readers of Wikipedia, and enjoyers of penguins/goats. Released on a daily-ish basis!"
 	/>
-	<meta property="og:image:width" content="400" />
-	<meta property="og:image:height" content="400" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:image:height" content="450" />
 	<meta name="theme-color" content="#282828" />
 	<title>goatpenguin 🐐🐧</title>
 </svelte:head>
