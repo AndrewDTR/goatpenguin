@@ -18,6 +18,7 @@
 	let revealed = $state(1);
 	let gameState = $state('guessing');
 	let answer = $state('');
+	let guesses: string[] = $state([]);
 
 	if (browser) {
 		const dayJSON = localStorage.getItem(day);
@@ -27,23 +28,25 @@
 
 			revealed = Number(currDay.revealed);
 			gameState = currDay.gameState;
+			guesses = currDay.guesess;
 		}
 	}
 
 	function handleAnswer(e: SubmitEvent) {
 		e.preventDefault();
 
+		guesses.push(answer);
 		revealed += 1;
 
 		if (browser) {
-			localStorage.setItem(day, JSON.stringify({ revealed, gameState }));
+			localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
 		}
 
 		if (acceptedGuesses.includes(answer.replaceAll("'", '').toLowerCase())) {
 			gameState = 'win';
 
 			if (browser) {
-				localStorage.setItem(day, JSON.stringify({ revealed, gameState }));
+				localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
 			}
 
 			return;
@@ -52,7 +55,7 @@
 		if (revealed > 5) {
 			gameState = 'loss';
 			if (browser) {
-				localStorage.setItem(day, JSON.stringify({ revealed, gameState }));
+				localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
 			}
 		}
 
@@ -128,6 +131,14 @@
 					placeholder="Place your guess here"
 				/>
 			</form>
+
+			<div class="mt-2">
+				{#each guesses as guess}
+					<div class="mb-1 flex border-2 border-white">
+						<p class="p-2 text-lg text-white">❌ {guess}</p>
+					</div>
+				{/each}
+			</div>
 		{:else if gameState === 'win'}
 			<div
 				class={`mt-4 flex h-12 w-full items-center justify-center border border-green-500 bg-green-800 text-white`}
