@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { page } from '$app/state';
 	let { data } = $props();
 	let { day, acceptedGuesses, dayNum, article, friendly, categories } = $derived(data);
 
@@ -64,7 +65,7 @@
 	}
 
 	async function copy() {
-		let text = `goatpenguin #${dayNum} ${gameState == 'win' ? revealed - 1 : 'X'}/5 \nhttps://gp.dtr.lol\n\n`;
+		let text = `goatpenguin #${dayNum} ${gameState == 'win' ? revealed - 1 : 'X'}/5 \n${page.url.origin}\n\n`;
 
 		for (let i = 1; i < 6; i++) {
 			if (revealed > i) {
