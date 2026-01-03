@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
+	import { redirect } from '@sveltejs/kit';
 	import { stringSimilarity } from 'string-similarity-js';
 
 	let { data } = $props();
 	let { day, acceptedGuesses, dayNum, article, friendly, categories } = $derived(data);
+
 
 	const bgClass: Record<number, string> = {
 		100: 'bg-indigo-100 border-indigo-200',
@@ -25,6 +27,10 @@
 	let copied = $state(false);
 
 	if (browser) {
+		if (page.url.host !== "goatpenguin.com") {
+			redirect(308, "https://goatpenguin.com");
+		}
+
 		const dayJSON = localStorage.getItem(day);
 
 		if (dayJSON != null) {
