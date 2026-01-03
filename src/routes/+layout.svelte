@@ -18,5 +18,6 @@
 	<meta property="og:image:height" content="450" />
 	<meta name="theme-color" content="#282828" />
 	<title>goatpenguin 🐐🐧</title>
+	<script src="https://ribbit.amoses.dev/api/script.js" data-site-id="f9e3ae28b63e" defer></script>
 </svelte:head>
 {@render children()}
