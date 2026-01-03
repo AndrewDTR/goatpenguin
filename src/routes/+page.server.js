@@ -1,15 +1,15 @@
 export async function load() {
-    const article = "Tamagotchi";
-    const friendly = "Tamagotchi";
-    const acceptedGuesses = ["tamogachi", "tamagachi", "tamagatchi", "tamagachi", "tamagotchi"];
-    const day = "day3";
-    const dayNum = 3;
+    const article = "Microplastics";
+    const friendly = "Microplastics";
+    const acceptedGuesses = ["microplastics", "microplastic", "micro plastic", "micro plastics"];
+    const day = "day4";
+    const dayNum = 4;
 
-    const categories = ["1996 establishments in Japan",
-        "2000s fads and trends",
-        "Bandai Namco Entertainment franchises",
-        "Fictional extraterrestrial species and races",
-        "Handheld virtual pets"
+    const categories = ["2004 neologisms",
+        "Clothing and the environment",
+        "Environmental impact of products",
+        "Water pollution",
+        "Plastics and the environment"
     ]
 
     return {
