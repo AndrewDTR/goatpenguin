@@ -1,15 +1,15 @@
 export async function load() {
-    const article = "Microplastics";
-    const friendly = "Microplastics";
-    const acceptedGuesses = ["microplastics", "microplastic", "micro plastic", "micro plastics"];
-    const day = "day4";
-    const dayNum = 4;
+    const article = "Wii";
+    const friendly = "Wii";
+    const acceptedGuesses = ["wii", "nintendo wii", "wii nintendo"];
+    const day = "day5";
+    const dayNum = 5;
 
-    const categories = ["2004 neologisms",
-        "Clothing and the environment",
-        "Environmental impact of products",
-        "Water pollution",
-        "Plastics and the environment"
+    const categories = ["2000s toys",
+        "2010s in video gaming",
+        "Spike Video Game Award winners",
+        "Backward-compatible video game consoles",
+        "Discontinued video game consoles",
     ]
 
     return {
