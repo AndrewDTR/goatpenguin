@@ -7,7 +7,6 @@
 	let { data } = $props();
 	let { day, acceptedGuesses, dayNum, article, friendly, categories } = $derived(data);
 
-
 	const bgClass: Record<number, string> = {
 		100: 'bg-indigo-100 border-indigo-200',
 		200: 'bg-indigo-200 border-indigo-300',
@@ -27,10 +26,6 @@
 	let copied = $state(false);
 
 	if (browser) {
-		if (page.url.host !== "goatpenguin.com") {
-			redirect(308, "https://goatpenguin.com");
-		}
-
 		const dayJSON = localStorage.getItem(day);
 
 		if (dayJSON != null) {

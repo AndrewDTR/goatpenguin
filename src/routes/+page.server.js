@@ -1,4 +1,10 @@
-export async function load() {
+import { redirect } from "@sveltejs/kit";
+
+export async function load({ url }) {
+    if (url.host !== 'goatpenguin.com' && url.hostname !== "localhost") {
+		redirect(308, 'https://goatpenguin.com');
+	}
+
     const article = "Wii";
     const friendly = "Wii";
     const acceptedGuesses = ["wii", "nintendo wii", "wii nintendo"];
