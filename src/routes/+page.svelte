@@ -7,6 +7,12 @@
 	let { data } = $props();
 	let { day, acceptedGuesses, dayNum, article, friendly, categories } = $derived(data);
 
+	type Game = {
+		revealed: number;
+		gameState: string;
+		guesses: string[];
+	};
+
 	const bgClass: Record<number, string> = {
 		100: 'bg-indigo-100 border-indigo-200',
 		200: 'bg-indigo-200 border-indigo-300',
@@ -29,11 +35,11 @@
 		const dayJSON = localStorage.getItem(day);
 
 		if (dayJSON != null) {
-			const currDay = JSON.parse(dayJSON);
+			const currDay: Game = JSON.parse(dayJSON);
 
 			revealed = Number(currDay.revealed);
 			gameState = currDay.gameState;
-			guesses = currDay.guesess;
+			guesses = currDay.guesses;
 		}
 	}
 
