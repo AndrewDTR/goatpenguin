@@ -5,17 +5,17 @@ export async function load({ url }) {
 		redirect(308, 'https://goatpenguin.com');
 	}
 
-    const article = "Wii";
-    const friendly = "Wii";
-    const acceptedGuesses = ["wii", "nintendo wii", "wii nintendo"];
-    const day = "day5";
-    const dayNum = 5;
+    const article = "Git";
+    const friendly = "Git";
+    const acceptedGuesses = ["git"];
+    const day = "day6";
+    const dayNum = 6;
 
-    const categories = ["2000s toys",
-        "2010s in video gaming",
-        "Spike Video Game Award winners",
-        "Backward-compatible video game consoles",
-        "Discontinued video game consoles",
+    const categories = ["2005 software",
+        "Free software programmed in C",
+        "Self-hosting software",
+        "Linus Torvalds",
+        "Version control systems",
     ]
 
     return {
