@@ -211,7 +211,7 @@
 			<div class="mt-1">
 				{#if img !== null}
 					<img
-						class="float-right m-2 h-16 border border-white p-2"
+						class="xs:float-none m-2 h-16 border border-white p-2 sm:float-right"
 						src={img}
 						alt={`${friendly} Wikipedia article image`}
 					/>
