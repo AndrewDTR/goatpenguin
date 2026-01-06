@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
-	import { redirect } from '@sveltejs/kit';
 	import { stringSimilarity } from 'string-similarity-js';
+	import { Confetti } from 'svelte-confetti';
 
 	let { data } = $props();
-	let { day, acceptedGuesses, dayNum, article, friendly, categories } = $derived(data);
+	let { day, acceptedGuesses, dayNum, article, friendly, categories, blurb, img } = $derived(data);
 
 	type Game = {
 		revealed: number;
@@ -164,31 +164,67 @@
 					</div>
 				{/each}
 			</div>
-		{:else if gameState === 'win'}
-			<div
-				class={`mt-4 flex h-12 w-full items-center justify-center border border-green-500 bg-green-800 text-white`}
-			>
-				You go(a)t it!
-			</div>
+		{:else if gameState === 'win' || gameState === 'loss'}
+			{#if gameState === 'win'}
+				<div class="relative mt-4">
+					<div class="absolute top-0 left-1/2">
+						<Confetti />
+					</div>
 
-			<p class="mt-2 text-xl font-bold text-white">Correct article: <i>{friendly}</i></p>
+					<div
+						class="relative z-0 flex h-12 w-full items-center justify-center border border-green-500 bg-green-800 text-white"
+					>
+						You go(a)t it!
+					</div>
+				</div>
+			{:else if gameState === 'loss'}
+				<div
+					class={`mt-4 flex h-12 w-full items-center justify-center border border-red-500 bg-red-800 text-white`}
+				>
+					Not today...
+				</div>
+			{/if}
+
+			<div class="mt-2">
+				<a
+					class="group flex flex-row items-baseline gap-2"
+					href={`https://en.wikipedia.org/wiki/${article}`}
+				>
+					<svg
+						class="shrink-0 fill-white group-hover:fill-blue-400"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 121 100"
+						width="24"
+						height="24"
+						stroke-miterlimit="10"
+						style="shape-rendering:geometricPrecision;fill-rule:evenodd"
+					>
+						<path
+							d="M120.85 29.21c0 .41-.13.78-.38 1.12-.26.33-.53.5-.84.5-2.49.24-4.54 1.04-6.12 2.41-1.59 1.36-3.22 3.97-4.91 7.81L82.8 99.19c-.17.54-.64.81-1.42.81-.61 0-1.08-.27-1.42-.81L65.49 68.93 48.85 99.19c-.34.54-.81.81-1.42.81q-1.11 0-1.47-.81L20.61 41.05q-2.37-5.415-5.01-7.56c-1.75-1.43-4.2-2.32-7.33-2.66-.27 0-.53-.14-.76-.43-.24-.28-.36-.61-.36-.98 0-.95.27-1.42.81-1.42 2.26 0 4.62.1 7.09.3 2.29.21 4.45.31 6.47.31 2.06 0 4.49-.1 7.29-.31 2.93-.2 5.53-.3 7.79-.3.54 0 .81.47.81 1.42 0 .94-.17 1.41-.5 1.41-2.26.17-4.04.75-5.34 1.72-1.3.98-1.95 2.26-1.95 3.85q0 1.215.81 3.03l20.95 47.31 11.89-22.46-11.08-23.23c-1.99-4.14-3.63-6.82-4.91-8.02-1.28-1.19-3.22-1.93-5.82-2.2-.24 0-.46-.14-.68-.43-.22-.28-.33-.61-.33-.98 0-.95.23-1.42.71-1.42 2.26 0 4.33.1 6.22.3 1.82.21 3.76.31 5.82.31 2.02 0 4.16-.1 6.42-.31 2.33-.2 4.62-.3 6.88-.3.54 0 .81.47.81 1.42 0 .94-.16 1.41-.5 1.41-4.52.31-6.78 1.59-6.78 3.85 0 1.01.52 2.58 1.57 4.7l7.33 14.88 7.29-13.61c1.01-1.92 1.52-3.54 1.52-4.86 0-3.1-2.26-4.75-6.78-4.96-.41 0-.61-.47-.61-1.41q0-.51.3-.96c.21-.31.41-.46.61-.46q2.43 0 5.97.3c2.26.21 4.12.31 5.57.31 1.04 0 2.58-.09 4.6-.26 2.56-.23 4.71-.35 6.43-.35.4 0 .6.4.6 1.21q0 1.62-1.11 1.62c-2.63.27-4.75 1-6.35 2.18s-3.6 3.86-5.99 8.04l-9.72 17.97 13.16 26.81 19.43-45.18c.67-1.65 1.01-3.17 1.01-4.55 0-3.31-2.26-5.06-6.78-5.27-.41 0-.61-.47-.61-1.41 0-.95.3-1.42.91-1.42 1.65 0 3.61.1 5.87.3 2.09.21 3.85.31 5.26.31 1.49 0 3.21-.1 5.16-.31 2.03-.2 3.85-.3 5.47-.3.47 0 .71.4.71 1.21"
+						/>
+					</svg>
+					<p class="text-3xl font-bold text-white group-hover:text-blue-400 group-hover:underline">
+						{friendly}
+					</p>
+				</a>
+			</div>
+			<div class="mt-1">
+				{#if img !== null}
+					<img
+						class="float-right m-2 h-16 border border-white p-2"
+						src={img}
+						alt={`${friendly} Wikipedia article image`}
+					/>
+				{/if}
+				<p class="text-white">{blurb}</p>
+				<p class="mt-1 text-sm text-gray-400 italic">
+					{`Article description${img ? ', categories, and image ' : ' and categories'} from Wikipedia.org.`}
+				</p>
+			</div>
 			<button
 				onclick={copy}
 				class="active:border-purple:800 mt-2 h-12 w-64 cursor-pointer border border-purple-700 bg-purple-900 text-white hover:border-purple-800 hover:bg-purple-950 active:bg-purple-600"
-				>{copied ? 'Copied to clipboard! 📋' : 'Copy game result to clipboard'}</button
-			>
-		{:else if gameState === 'loss'}
-			<div
-				class={`mt-4 flex h-12 w-full items-center justify-center border border-red-500 bg-red-800 text-white`}
-			>
-				Not today...
-			</div>
-
-			<p class="mt-2 text-xl font-bold text-white">Correct article: <i>{friendly}</i></p>
-			<button
-				onclick={copy}
-				class="active:border-purple:800 mt-2 h-12 w-64 cursor-pointer border border-purple-700 bg-purple-900 text-white hover:border-purple-800 hover:bg-purple-950 active:bg-purple-600"
-				>{copied ? 'Copied to clipboard! 📋' : 'Copy game result to clipboard'}</button
+				>{copied ? 'Copied to clipboard! ✅' : 'Copy game result to clipboard 📋'}</button
 			>
 		{/if}
 	</div>
