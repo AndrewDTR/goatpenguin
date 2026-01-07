@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Theranos";
-    const friendly = "Theranos";
-    const acceptedGuesses = ["theranos"];
-    const day = "day7";
-    const dayNum = 7;
+    const article = "The_Great_Gatsby";
+    const friendly = "The Great Gatsby";
+    const acceptedGuesses = ["the great gatsby", "great gatsby", "gatsby"];
+    const day = "day8";
+    const dayNum = 8;
 
-    const categories = ["2003 establishments in California",
-        "Biotechnology companies disestablished in 2018",
-        "Confidence tricks",
-        "Health fraud companies",
-        "Corporate scandals in the United States",
-    ];
+    const categories = ["1925 American novels",
+        "Novels set in New York City",
+        "American novels adapted into films",
+        "Novels set in the Roaring Twenties",
+        "Novels by F. Scott Fitzgerald",
+    ]
 
-    const blurb = "Theranos Inc. was an American privately held corporation that was touted as a breakthrough health technology company. Founded in 2003 by then 19-year-old Elizabeth Holmes, Theranos raised more than US$700 million from venture capitalists and private investors, resulting in a $9 billion valuation at its peak in 2013 and 2014. The company claimed that it had devised blood tests that could be performed rapidly and accurately, while requiring very small amounts of blood, all using compact automated devices that the company had developed. These claims were proven to be false.";
-    const img = "https://upload.wikimedia.org/wikipedia/commons/e/eb/Theranos_Logo.svg";
+    const blurb = "The Great Gatsby is a 1925 tragedy novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with Jay Gatsby, a mysterious millionaire obsessed with reuniting with his former lover, Daisy Buchanan.";
+    const img = "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg";
 
     return {
         article,
