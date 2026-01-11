@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "SethBling";
-    const friendly = "SethBling";
-    const acceptedGuesses = ["sethbling", "seth bling"];
-    const day = "day11";
-    const dayNum = 11;
+    const article = "Black_Friday_(shopping)";
+    const friendly = "Black Friday";
+    const acceptedGuesses = ["black friday"];
+    const day = "day12";
+    const dayNum = 12;
 
-    const categories = ["American software engineers",
-        "American gaming YouTubers",
-        "Microsoft employees",
-        "Minecraft YouTubers",
-        "Mario players",
+    const categories = ["Recurring events established in 1951",
+        "November observances",
+        "Friday observances",
+        "Retailing in the United States",
+        "Sales and clearances",
     ]
 
-    const blurb = `SethBling (born April 3, 1987) is an American video game commentator and Twitch video game live streamer known for YouTube videos focused around the 1990 side-scrolling platform video game Super Mario World and the 2011 sandbox video game Minecraft. He created original and derivative video games, devices and phenomena in Minecraft, without using Minecraft mods. He created an interpreter for the programming language BASIC and an emulator for the 1977 home video game console Atari 2600 in Minecraft. In addition to Minecraft builds that run without mods, he created plugins for the game.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/1/12/Sethbling_Interview_%28cropped%29.jpg";
+    const blurb = `Black Friday is the Friday after Thanksgiving in the United States. It traditionally marks the start of the Christmas shopping season and is the busiest shopping day of the year in the United States. Many stores offer highly promoted sales at heavily discounted prices and often open early, sometimes as early as midnight or even on Thanksgiving. Some stores' sales continue to Monday ("Cyber Monday") or for a week ("Cyber Week").`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/1/13/Black_Friday_by_Powhusku.jpg";
 
     return {
         article,
