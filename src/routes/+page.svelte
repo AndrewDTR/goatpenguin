@@ -9,7 +9,7 @@
 
 	type Game = {
 		revealed: number;
-		gameState: string;
+		gameState: 'guessing' | 'win' | 'loss';
 		guesses: string[];
 	};
 
@@ -30,6 +30,7 @@
 	let answer = $state('');
 	let guesses: string[] = $state([]);
 	let copied = $state(false);
+	let streak = $state(0);
 
 	if (browser) {
 		const dayJSON = localStorage.getItem(day);
@@ -40,7 +41,32 @@
 			revealed = Number(currDay.revealed);
 			gameState = currDay.gameState;
 			guesses = currDay.guesses;
+
+			if (gameState === 'win') {
+				streak = checkStreak();
+			}
 		}
+	}
+
+	function checkStreak() {
+		for (let i = dayNum; i > 0; i--) {
+			const dayKey = `day${i}`;
+			const streak = dayNum - i;
+
+			const dayResult = localStorage.getItem(dayKey);
+
+			if (dayResult === null) {
+				return streak;
+			}
+
+			const dayGameState = JSON.parse(dayResult).gameState;
+
+			if (dayGameState !== 'win') {
+				return streak;
+			}
+		}
+
+		return dayNum;
 	}
 
 	function handleAnswer(e: SubmitEvent) {
@@ -62,6 +88,8 @@
 			if (browser) {
 				localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
 			}
+
+			streak = checkStreak();
 
 			return;
 		}
@@ -172,16 +200,30 @@
 					</div>
 
 					<div
-						class="relative z-0 flex h-12 w-full items-center justify-center border border-green-500 bg-green-800 text-white"
+						class="relative z-0 flex w-full items-center justify-center border border-green-500 bg-green-800"
 					>
-						You go(a)t it!
+						<div class="m-2 flex flex-col text-center">
+							<p class="text-xl font-bold text-white">🐐 You go(a)t it!</p>
+							{#if streak > 0}
+								<p class="text-white">
+									Current streak: {streak} day{streak == 1 ? '' : 's'}
+								</p>
+							{/if}
+						</div>
 					</div>
 				</div>
 			{:else if gameState === 'loss'}
 				<div
-					class={`mt-4 flex h-12 w-full items-center justify-center border border-red-500 bg-red-800 text-white`}
+					class="relative z-0 mt-4 flex w-full items-center justify-center border border-red-500 bg-red-800"
 				>
-					Not today...
+					<div class="m-2 flex flex-col text-center">
+						<p class="text-xl font-bold text-white">🐧 Not today...</p>
+						{#if streak > 0}
+							<p class="text-white">
+								Current streak: {streak} day{streak == 1 ? '' : 's'}
+							</p>
+						{/if}
+					</div>
 				</div>
 			{/if}
 
