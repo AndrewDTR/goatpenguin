@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Dr_Pepper";
-    const friendly = "Dr Pepper";
-    const acceptedGuesses = ["dr pepper", "dr. pepper", "doctor pepper"];
-    const day = "day13";
-    const dayNum = 13;
+    const article = "Vocaloid";
+    const friendly = "Vocaloid";
+    const acceptedGuesses = ["vocaloid"];
+    const day = "day14";
+    const dayNum = 14;
 
-    const categories = ["Products introduced in 1885",
-        "Culture of Texas",
-        "Carbonated drinks",
-        "Drink brands originating from patent medicines",
-        "Keurig brands",
+    const categories = ["2000 establishments in Spain",
+        "2004 software",
+        "Japanese inventions",
+        "Music production software",
+        "Singing software synthesizers",
     ]
 
-    const blurb = `Dr Pepper is a carbonated soft drink created in the 1880s by American pharmacist Charles Alderton in Waco, Texas. It was first marketed nationally in the United States in 1904. The beverage is manufactured and distributed by different companies depending on the country: Keurig Dr Pepper produces it in the US, Canada, and Mexico; The Coca-Cola Company in the United Kingdom, Ireland, Japan, and South Korea; and PepsiCo in several other markets. Variants include diet version and, beginning in the 2000s, a range of additional flavors.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/c/cc/Dr_Pepper_Dose_2024.jpg";
+    const blurb = `Vocaloid (ボーカロイド, Bōkaroido) is a singing voice synthesizer software product. Its signal processing part was developed through a joint research project between Yamaha Corporation and the Music Technology Group at Pompeu Fabra University, Barcelona. The software was ultimately developed into the commercial product "Vocaloid" that was released in 2004.`;
+    const img = "https://upload.wikimedia.org/wikipedia/en/1/14/VOCALOID_6.png";
 
     return {
         article,
