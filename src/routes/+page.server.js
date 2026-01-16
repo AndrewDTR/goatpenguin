@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Tetris";
-    const friendly = "Tetris";
-    const acceptedGuesses = ["tetris"];
-    const day = "day16";
-    const dayNum = 16;
+    const article = "Corecore";
+    const friendly = "Corecore";
+    const acceptedGuesses = ["corecore", "core core"];
+    const day = "day17";
+    const dayNum = 17;
 
-    const categories = ["1990s fads and trends",
-        "NP-complete problems",
-        "Soviet inventions",
-        "Video game franchises",
-        "Falling block puzzle games",
+    const categories = ["Digital media use and mental health",
+        "Internet memes introduced in 2022",
+        "Internet aesthetics",
+        "Existentialist works",
+        "Core aesthetics",
     ]
 
-    const blurb = `Tetris (Russian: Тетрис) is a puzzle video game created by Alexey Pajitnov, a Soviet software engineer. In typical Tetris gameplay, falling tetromino shapes must be neatly sorted into a pile. Once a horizontal line of the game board is filled in, it disappears, granting points and preventing the pile from overflowing. Since its initial creation, this gameplay has been used in over 220 versions, released for over 70 platforms. Newer versions frequently implement additional game mechanics, some of which have become standard over time. As of December 2024, these versions collectively serve as the second-best-selling video game series with over 520 million sales, mostly on mobile devices.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/4/46/Tetris_logo.png";
+    const blurb = `Corecore (alternatively spelled CoreCore) is an artistic movement aiming to capture post-2020 sensibilities. A product of youth culture in the 2020s, the corecore aesthetic can largely be found on TikTok, where it juxtaposes various video clips while emotional music plays. Meant to evoke strong emotions, the corecore aesthetic juxtaposes imagery with its content made up of "seemingly unrelated clips" culled from a variety of sources including news footage, social media, films, livestreams, and memes. This content is then overlaid on usually emotionally rousing, somber, or ambient music.`;
+    const img = null;
 
     return {
         article,
