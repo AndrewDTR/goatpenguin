@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Corecore";
-    const friendly = "Corecore";
-    const acceptedGuesses = ["corecore", "core core"];
-    const day = "day17";
-    const dayNum = 17;
+    const article = "Vine (service)";
+    const friendly = "Vine";
+    const acceptedGuesses = ["vine"];
+    const day = "day18";
+    const dayNum = 18;
 
-    const categories = ["Digital media use and mental health",
-        "Internet memes introduced in 2022",
-        "Internet aesthetics",
-        "Existentialist works",
-        "Core aesthetics",
+    const categories = ["2010s in Internet culture",
+        "2012 mergers and acquisitions",
+        "Defunct social networking services",
+        "Former video hosting services",
+        "Twitter, Inc. acquisitions",
     ]
 
-    const blurb = `Corecore (alternatively spelled CoreCore) is an artistic movement aiming to capture post-2020 sensibilities. A product of youth culture in the 2020s, the corecore aesthetic can largely be found on TikTok, where it juxtaposes various video clips while emotional music plays. Meant to evoke strong emotions, the corecore aesthetic juxtaposes imagery with its content made up of "seemingly unrelated clips" culled from a variety of sources including news footage, social media, films, livestreams, and memes. This content is then overlaid on usually emotionally rousing, somber, or ambient music.`;
-    const img = null;
+    const blurb = `Vine was an American short-form video hosting service where users could share up to 6-second-long looping video clips. Founded in June 2012 by Rus Yusupov, Dom Hofmann and Colin Kroll, the company was bought by Twitter, Inc., four months later for $30 million. Vine launched with its iOS app on January 24, 2013, with Android and Windows versions following.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/5/57/Vine_wordmark.svg";
 
     return {
         article,
