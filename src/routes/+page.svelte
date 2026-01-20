@@ -69,6 +69,18 @@
 		return dayNum;
 	}
 
+	function win() {
+		gameState = 'win';
+
+		if (browser) {
+			localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
+		}
+
+		streak = checkStreak();
+
+		return;
+	}
+
 	function handleAnswer(e: SubmitEvent) {
 		e.preventDefault();
 
@@ -79,19 +91,14 @@
 			localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
 		}
 
+		if (acceptedGuesses.includes(answer.replaceAll("'", '').toLowerCase())) {
+			return win();
+		}
+
 		if (
-			acceptedGuesses.includes(answer.replaceAll("'", '').toLowerCase()) ||
-			stringSimilarity(friendly.toLowerCase(), answer.toLowerCase()) >= 0.7
+			acceptedGuesses.some((a) => stringSimilarity(a.toLowerCase(), answer.toLowerCase()) >= 0.7)
 		) {
-			gameState = 'win';
-
-			if (browser) {
-				localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
-			}
-
-			streak = checkStreak();
-
-			return;
+			return win();
 		}
 
 		if (revealed > 5) {
