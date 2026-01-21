@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Michelin_Guide";
-    const friendly = "Michelin Guide";
-    const acceptedGuesses = ["michelin guide", "michelin", "michelin star", "michelin stars"];
-    const day = "day21";
-    const dayNum = 21;
+    const article = "Kaleidoscope";
+    const friendly = "Kaleidoscope";
+    const acceptedGuesses = ["kaleidoscope", "kalidiscope", "kaelidiscope", "kuhlidoscope", "kuhlidiscope"];
+    const day = "day22";
+    const dayNum = 22;
 
-    const categories = ["1900 establishments in France",
-        "Hotel guide books",
-        "Consumer guides",
-        "Restaurant guides",
-        "Food and drink awards",
+    const categories = ["1817 introductions",
+        "19th-century inventions",
+        "Optical toys",
+        "Scottish inventions",
+        "Patterns",
     ]
 
-    const blurb = `The Michelin Guides are a series of guide books that have been published by the French tire company Michelin since 1900. The Guide awards up to three Michelin stars for excellence to a select few restaurants in certain geographic areas. Michelin also publishes the Green Guides, a series of general guides to cities, regions, and countries.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/8/8a/Michelin_Guide_logo.svg";
+    const blurb = `A kaleidoscope is an optical instrument with two or more reflecting surfaces (or mirrors) tilted to each other at an angle, so that one or more (parts of) objects on one end of these mirrors are shown as a symmetrical pattern when viewed from the other end, due to repeated reflection. These reflectors are often enclosed in a tube, usually containing on one end a cell with loose, colored pieces of glass or other transparent (and/or opaque) materials to be reflected into the viewed pattern. Rotation of the cell causes motion of the materials, resulting in an ever-changing view being presented.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/f/f4/Kaleidoscopes.jpg";
 
     return {
         article,
