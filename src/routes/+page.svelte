@@ -137,7 +137,7 @@
 	}
 </script>
 
-<div class="flex min-h-screen w-full flex-wrap justify-center">
+<div class={`flex min-h-screen w-full flex-wrap justify-center ${gameState !== "guessing" ? "font-['Comic_Sans_MS',cursive]" : ""}`}>
 	<div class="m-4 flex max-w-3xl flex-col">
 		<div
 			class="flex h-auto flex-wrap items-center justify-center gap-2

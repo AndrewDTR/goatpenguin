@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Kaleidoscope";
-    const friendly = "Kaleidoscope";
-    const acceptedGuesses = ["kaleidoscope", "kalidiscope", "kaelidiscope", "kuhlidoscope", "kuhlidiscope"];
-    const day = "day22";
-    const dayNum = 22;
+    const article = "Comic_Sans";
+    const friendly = "Comic Sans";
+    const acceptedGuesses = ["comic sans", "comic sans ms"];
+    const day = "day23";
+    const dayNum = 23;
 
-    const categories = ["1817 introductions",
-        "19th-century inventions",
-        "Optical toys",
-        "Scottish inventions",
-        "Patterns",
+    const categories = ["Internet memes introduced in the 1990s",
+        "Management of dyslexia",
+        "Typefaces designed by Vincent Connare",
+        "Cyrillic typefaces",
+        "Microsoft typefaces",
     ]
 
-    const blurb = `A kaleidoscope is an optical instrument with two or more reflecting surfaces (or mirrors) tilted to each other at an angle, so that one or more (parts of) objects on one end of these mirrors are shown as a symmetrical pattern when viewed from the other end, due to repeated reflection. These reflectors are often enclosed in a tube, usually containing on one end a cell with loose, colored pieces of glass or other transparent (and/or opaque) materials to be reflected into the viewed pattern. Rotation of the cell causes motion of the materials, resulting in an ever-changing view being presented.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/f/f4/Kaleidoscopes.jpg";
+    const blurb = `Comic Sans MS is a sans-serif typeface created and designed by Vincent Connare and released by Microsoft Corporation in 1994. Designed as a non-connecting script, the typeface draws inspiration from comic book lettering, to emulate the informal and cartoonish tone of speech bubbles. It was originally developed for use in Microsoft's software, and since then has become widely recognized for its use in casual contexts such as children's books, personal documentation and in educational resources.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/d/d4/ComicSansSpec3.svg";
 
     return {
         article,
