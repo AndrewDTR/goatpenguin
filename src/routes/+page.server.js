@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "American_Pie_(song)";
-    const friendly = "American Pie (song)";
-    const acceptedGuesses = ["american pie", "bye bye miss american pie", "miss american pie"];
-    const day = "day24";
-    const dayNum = 24;
+    const article = "Theremin";
+    const friendly = "Theremin";
+    const acceptedGuesses = ["theremin", "theramin"];
+    const day = "day25";
+    const dayNum = 25;
 
-    const categories = ["1971 singles",
-        "Billboard Hot 100 number-one singles",
-        "Commemoration songs",
-        "Songs based on American history",
-        "Songs written by Don McLean",
+    const categories = ["1928 in the Soviet Union",
+        "Musical instruments invented in the 1920s",
+        "Continuous pitch instruments",
+        "Monophonic synthesizers",
+        "Experimental musical instruments",
     ]
 
-    const blurb = `"American Pie" is a song by American singer and songwriter Don McLean. Recorded and released in 1971 on the album of the same name, the single was the number-one US hit for four weeks in 1972 starting January 15 after just eight weeks on the US Billboard charts (where it entered at number 69). The song also topped the charts in Australia, Canada, and New Zealand. In the United Kingdom, the single reached number 2, where it stayed for three weeks on its original 1971 release, and a reissue in 1991 reached No. 12. The song was listed as the No. 5 song on the RIAA project Songs of the Century. A truncated version of the song was covered by Madonna in 2000 and reached No. 1 in at least 15 countries, including the UK, Canada, and Australia. At 8 minutes and 42 seconds, McLean's combined version is the sixth longest song to enter the Billboard Hot 100 (at the time of release it was the longest). The song also held the record for almost 50 years for being the longest song to reach number one before Taylor Swift's "All Too Well (10 Minute Version)" broke the record in 2021. Due to its exceptional length, it was initially released as a two-sided 7-inch single. "American Pie" has been described as "one of the most successful and debated songs of the 20th century".`;
-    const img = "https://upload.wikimedia.org/wikipedia/en/b/b9/American_Pie_by_Don_McLean.png";
+    const blurb = `The theremin is an electronic musical instrument controlled without physical contact by the performer (who is known as a thereminist). It is named after its inventor, Leon Theremin, who patented the device in 1928. The instrument's controlling section usually consists of two metal antennas that function not as radio antennas but rather as position sensors. Each antenna forms one half of a capacitor with each of the thereminist's hands as the other half of the capacitor. These antennas capacitively sense the relative position of the hands and control oscillators for frequency with one hand, and amplitude (volume) with the other. The electric signals from the theremin are amplified and sent to a loudspeaker. The sound of the instrument is often associated with eerie situations.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/c/c8/Etherwave_Theremin_Kit.jpg";
 
     return {
         article,
