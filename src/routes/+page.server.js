@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Theremin";
-    const friendly = "Theremin";
-    const acceptedGuesses = ["theremin", "theramin"];
-    const day = "day25";
-    const dayNum = 25;
+    const article = "Geocaching";
+    const friendly = "Geocaching";
+    const acceptedGuesses = ["geocaching", "geocache"];
+    const day = "day26";
+    const dayNum = 26;
 
-    const categories = ["1928 in the Soviet Union",
-        "Musical instruments invented in the 1920s",
-        "Continuous pitch instruments",
-        "Monophonic synthesizers",
-        "Experimental musical instruments",
+    const categories = ["2000 establishments in Oregon",
+        "2000 neologisms",
+        "Games and sports introduced in 2000",
+        "Global Positioning System",
+        "Internet object tracking",
     ]
 
-    const blurb = `The theremin is an electronic musical instrument controlled without physical contact by the performer (who is known as a thereminist). It is named after its inventor, Leon Theremin, who patented the device in 1928. The instrument's controlling section usually consists of two metal antennas that function not as radio antennas but rather as position sensors. Each antenna forms one half of a capacitor with each of the thereminist's hands as the other half of the capacitor. These antennas capacitively sense the relative position of the hands and control oscillators for frequency with one hand, and amplitude (volume) with the other. The electric signals from the theremin are amplified and sent to a loudspeaker. The sound of the instrument is often associated with eerie situations.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/c/c8/Etherwave_Theremin_Kit.jpg";
+    const blurb = `Geocaching is an outdoor recreational activity, in which participants use a Global Positioning System (GPS) receiver or mobile device and other navigational techniques to hide and seek containers, called geocaches or caches, at specific locations marked by coordinates all over the world. The first geocache was placed in 2000, and by 2023 there were over three million active caches worldwide.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/d/d7/Classic_Geocache.jpg";
 
     return {
         article,
