@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Geocaching";
-    const friendly = "Geocaching";
-    const acceptedGuesses = ["geocaching", "geocache"];
-    const day = "day26";
-    const dayNum = 26;
+    const article = "Minecraft_Earth";
+    const friendly = "Minecraft Earth";
+    const acceptedGuesses = ["minecraft earth", "earth minecraft"];
+    const day = "day27";
+    const dayNum = 27;
 
-    const categories = ["2000 establishments in Oregon",
-        "2000 neologisms",
-        "Games and sports introduced in 2000",
-        "Global Positioning System",
-        "Internet object tracking",
+    const categories = ["2019 video games",
+        "Online games shut down in 2021",
+        "Location-based games",
+        "Video games developed in Sweden",
+        "Augmented reality games",
     ]
 
-    const blurb = `Geocaching is an outdoor recreational activity, in which participants use a Global Positioning System (GPS) receiver or mobile device and other navigational techniques to hide and seek containers, called geocaches or caches, at specific locations marked by coordinates all over the world. The first geocache was placed in 2000, and by 2023 there were over three million active caches worldwide.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/d/d7/Classic_Geocache.jpg";
+    const blurb = `Minecraft Earth was an augmented reality and geolocation-based sandbox game developed by Mojang Studios and Blackbird interactive and published by Xbox Game Studios. A spin-off of the video game Minecraft, it was first announced in May 2019, and was available on Android and iOS. The game was free-to-play, and was first released in early access on 17 October 2019. The game received its final update in January 2021 and officially shut down on 30 June 2021 due to the COVID-19 pandemic.`;
+    const img = "https://upload.wikimedia.org/wikipedia/en/b/bb/Minecraft_Earth.png";
 
     return {
         article,
