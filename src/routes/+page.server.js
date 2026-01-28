@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "The_Starry_Night";
-    const friendly = "The Starry Night";
-    const acceptedGuesses = ["the starry night", "starry night"];
-    const day = "day28";
-    const dayNum = 28;
+    const article = "MythBusters";
+    const friendly = "MythBusters";
+    const acceptedGuesses = ["mythbusters", "myth busters"];
+    const day = "day29";
+    const dayNum = 29;
 
-    const categories = ["1889 paintings",
-        "Paintings in the Museum of Modern Art (New York City)",
-        "Paintings of Venus (planet)",
-        "Night in culture",
-        "Paintings by Vincent van Gogh",
+    const categories = ["2003 Australian television series debuts",
+        "Discovery Channel original programming",
+        "American educational television series",
+        "Scientific skepticism mass media",
+        "Television series about urban legends",
     ]
 
-    const blurb = `The Starry Night, often called simply Starry Night, is an oil-on-canvas painting by the Dutch Post-Impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an imaginary village. It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P. Bliss Bequest. Described as a "touchstone of modern art", The Starry Night has been regarded as one of the most recognizable paintings in the Western canon.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/d/de/Vincent_van_Gogh_Starry_Night.jpg";
+    const blurb = `MythBusters is a science entertainment television series created by Peter Rees, and produced by Beyond International, in Australia. The series premiered on the Discovery Channel in 2003. It was broadcast on television networks and other Discovery channels worldwide. The show's original hosts, special effects experts Adam Savage and Jamie Hyneman, used elements of the scientific method to test the validity of rumors, myths, movie scenes, adages, Internet videos, and news stories.`;
+    const img = "https://upload.wikimedia.org/wikipedia/en/2/24/MythBusters_title_screen.jpg";
 
     return {
         article,
