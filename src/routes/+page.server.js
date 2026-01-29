@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "MythBusters";
-    const friendly = "MythBusters";
-    const acceptedGuesses = ["mythbusters", "myth busters"];
-    const day = "day29";
-    const dayNum = 29;
+    const article = "Yellowstone_National_Park";
+    const friendly = "Yellowstone National Park";
+    const acceptedGuesses = ["yellowstone", "yellowstone park", "yellowstone national park"];
+    const day = "day30";
+    const dayNum = 30;
 
-    const categories = ["2003 Australian television series debuts",
-        "Discovery Channel original programming",
-        "American educational television series",
-        "Scientific skepticism mass media",
-        "Television series about urban legends",
+    const categories = ["Protected areas established in 1872",
+        "Biosphere reserves of the United States",
+        "History of the Rocky Mountains",
+        "National parks in Wyoming",
+        "Geysers of Wyoming",
     ]
 
-    const blurb = `MythBusters is a science entertainment television series created by Peter Rees, and produced by Beyond International, in Australia. The series premiered on the Discovery Channel in 2003. It was broadcast on television networks and other Discovery channels worldwide. The show's original hosts, special effects experts Adam Savage and Jamie Hyneman, used elements of the scientific method to test the validity of rumors, myths, movie scenes, adages, Internet videos, and news stories.`;
-    const img = "https://upload.wikimedia.org/wikipedia/en/2/24/MythBusters_title_screen.jpg";
+    const blurb = `Yellowstone National Park is a national park of the United States located in the northwest corner of the state of Wyoming, with small portions extending into Montana and Idaho. It was established by the 42nd U.S. Congress through the Yellowstone National Park Protection Act and signed into law by President Ulysses S. Grant on March 1, 1872. Yellowstone was the first national park in the US, and is also widely understood to be the first national park in the world. The park is known for its wildlife and its many geothermal features, especially the Old Faithful geyser, one of its most popular. While it represents many types of biomes, subalpine forest is the most abundant. It is part of the South Central Rockies forests ecoregion.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Canyon_of_yellowstone.jpg";
 
     return {
         article,
