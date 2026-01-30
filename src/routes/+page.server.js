@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Yellowstone_National_Park";
-    const friendly = "Yellowstone National Park";
-    const acceptedGuesses = ["yellowstone", "yellowstone park", "yellowstone national park"];
-    const day = "day30";
-    const dayNum = 30;
+    const article = "The_Blue_Marble";
+    const friendly = "The Blue Marble";
+    const acceptedGuesses = ["the blue marble", "blue marble"];
+    const day = "day31";
+    const dayNum = 31;
 
-    const categories = ["Protected areas established in 1872",
-        "Biosphere reserves of the United States",
-        "History of the Rocky Mountains",
-        "National parks in Wyoming",
-        "Geysers of Wyoming",
+    const categories = ["1972 works",
+        "Harrison Schmitt",
+        "Apollo 17",
+        "Color photographs",
+        "Photographs of Earth from outer space",
     ]
 
-    const blurb = `Yellowstone National Park is a national park of the United States located in the northwest corner of the state of Wyoming, with small portions extending into Montana and Idaho. It was established by the 42nd U.S. Congress through the Yellowstone National Park Protection Act and signed into law by President Ulysses S. Grant on March 1, 1872. Yellowstone was the first national park in the US, and is also widely understood to be the first national park in the world. The park is known for its wildlife and its many geothermal features, especially the Old Faithful geyser, one of its most popular. While it represents many types of biomes, subalpine forest is the most abundant. It is part of the South Central Rockies forests ecoregion.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Canyon_of_yellowstone.jpg";
+    const blurb = `The Blue Marble is a photograph of Earth taken on December 7, 1972, by Harrison Schmitt aboard the Apollo 17 spacecraft on its way to the Moon. Viewed from around 29,400 km (18,300 mi) from Earth's surface, a cropped and rotated version has become one of the most reproduced images in history.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg";
 
     return {
         article,
