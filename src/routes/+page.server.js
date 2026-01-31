@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "The_Blue_Marble";
-    const friendly = "The Blue Marble";
-    const acceptedGuesses = ["the blue marble", "blue marble"];
-    const day = "day31";
-    const dayNum = 31;
+    const article = "Silly_Bandz";
+    const friendly = "Silly Bandz";
+    const acceptedGuesses = ["silly bandz", "silly bands"];
+    const day = "day32";
+    const dayNum = 32;
 
-    const categories = ["1972 works",
-        "Harrison Schmitt",
-        "Apollo 17",
-        "Color photographs",
-        "Photographs of Earth from outer space",
+    const categories = ["Products introduced in 2002",
+        "Toy collecting",
+        "2010s fashion",
+        "Silicone toys",
+        "Bracelets",
     ]
 
-    const blurb = `The Blue Marble is a photograph of Earth taken on December 7, 1972, by Harrison Schmitt aboard the Apollo 17 spacecraft on its way to the Moon. Viewed from around 29,400 km (18,300 mi) from Earth's surface, a cropped and rotated version has become one of the most reproduced images in history.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg";
+    const blurb = `Silly Bandz are rubber bands made of silicone rubber formed into shapes including animals, objects, numbers, and letters. They are normally worn as bracelets. Silly Bandz retail in packages with select themes, such as princesses or animals, and fashion accessories. Similarly shaped silicone bands are also available under other brand names from a variety of companies. Silly Bandz were especially popular in the early 2010s.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/9/9a/Shaped_Rubber_Bands.JPG";
 
     return {
         article,

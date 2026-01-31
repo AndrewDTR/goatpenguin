@@ -260,7 +260,7 @@
 			<div class="mt-1">
 				{#if img !== null}
 					<img
-						class="border border-white my-2 h-80 w-auto p-2 sm:float-none md:float-right md:m-2"
+						class="border border-white my-2 h-72 w-auto p-2 sm:float-none md:float-right md:m-2"
 						src={img}
 						alt={`${friendly} Wikipedia article image`}
 					/>
