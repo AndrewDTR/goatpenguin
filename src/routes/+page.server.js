@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Steinway_%26_Sons";
-    const friendly = "Steinway & Sons";
-    const acceptedGuesses = ["steinway", "steinway and sons", "steinway & sons"];
-    const day = "day33";
-    const dayNum = 33;
+    const article = "Doomsday_Clock";
+    const friendly = "Doomsday Clock";
+    const acceptedGuesses = ["doomsday clock"];
+    const day = "day34";
+    const dayNum = 34;
 
-    const categories = ["Companies based in Queens, New York",
-        "German brands",
-        "Purveyors to the Russian imperial family",
-        "Luxury brands",
-        "Piano manufacturing companies",
+    const categories = ["Doomsday scenarios",
+        "Political symbols",
+        "Symbols introduced in 1947",
+        "Alert measurement systems",
+        "Clocks",
     ]
 
-    const blurb = `Steinway & Sons, also known as Steinway, is a German-American piano company, founded in 1853 in New York City by German piano builder Heinrich Engelhard Steinweg (later known as Henry E. Steinway). The company's growth led to a move to a larger factory in New York, and later opening an additional factory in Hamburg, Germany. The New York factory, in the borough of Queens, supplies the Americas, and the factory in Hamburg supplies the rest of the world.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/8/8d/Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png";
+    const blurb = [`The Doomsday Clock is a symbol that represents the estimated likelihood of a human-made global catastrophe, in the opinion of the nonprofit organization Bulletin of the Atomic Scientists.`, `The Clock's original setting in 1947 was seven minutes to midnight. It has since been set backward eight times and forward 19 times. The farthest time from midnight was 17 minutes in 1991, and the closest is 85 seconds in 2026.`, `The Clock was moved to 150 seconds (2 minutes, 30 seconds) in 2017, then forward to two minutes to midnight in 2018, and left unchanged in 2019. It was moved forward to 100 seconds (1 minute, 40 seconds) in 2020, 90 seconds (1 minute, 30 seconds) in 2023, 89 seconds (1 minute, 29 seconds) in 2025, and 85 seconds (1 minute, 25 seconds) in 2026.`]
+    const img = "/clock.jpg";
 
     return {
         article,

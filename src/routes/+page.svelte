@@ -260,12 +260,18 @@
 			<div class="mt-1">
 				{#if img !== null}
 					<img
-						class="border border-white my-2 h-72 w-auto p-2 sm:float-none md:float-right md:m-2"
+						class="my-2 h-72 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
 						src={img}
 						alt={`${friendly} Wikipedia article image`}
 					/>
 				{/if}
-				<p class="text-white">{blurb}</p>
+				{#if typeof blurb === 'string'}
+					<p class="text-white">{blurb}</p>
+				{:else if Array.isArray(blurb)}
+					{#each blurb as paragraph}
+						<p class="mb-4 text-white">{paragraph}</p>
+					{/each}
+				{/if}
 				<p class="mt-1 text-sm text-gray-400 italic">
 					{`Article description${img ? ', categories, and image ' : ' and categories'} from Wikipedia.org.`}
 				</p>
