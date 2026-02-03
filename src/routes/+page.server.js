@@ -7,7 +7,7 @@ export async function load({ url }) {
 
     const article = "Deflategate";
     const friendly = "Deflategate";
-    const acceptedGuesses = ["deflategate", "deflate gate"];
+    const acceptedGuesses = ["deflategate", "deflate gate", "deflation gate"];
     const day = "day35";
     const dayNum = 35;
 
