@@ -109,6 +109,10 @@
 		}
 
 		answer = '';
+
+		if (typeof window !== 'undefined' && window.rybbit) {
+			window.rybbit.event('gp_update');
+		}
 	}
 
 	async function copy() {
