@@ -70,6 +70,10 @@
 	}
 
 	function win() {
+		if (typeof window !== 'undefined' && window.rybbit) {
+			window.rybbit.event('gp_win');
+		}
+
 		gameState = 'win';
 
 		if (browser) {
@@ -82,6 +86,10 @@
 	}
 
 	function handleAnswer(e: SubmitEvent) {
+		if (typeof window !== 'undefined' && window.rybbit) {
+			window.rybbit.event('gp_update');
+		}
+
 		e.preventDefault();
 
 		guesses.push(answer);
@@ -102,6 +110,10 @@
 		}
 
 		if (revealed > 5) {
+			if (typeof window !== 'undefined' && window.rybbit) {
+				window.rybbit.event('gp_loss');
+			}
+
 			gameState = 'loss';
 			if (browser) {
 				localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
@@ -109,10 +121,6 @@
 		}
 
 		answer = '';
-
-		if (typeof window !== 'undefined' && window.rybbit) {
-			window.rybbit.event('gp_update');
-		}
 	}
 
 	async function copy() {
