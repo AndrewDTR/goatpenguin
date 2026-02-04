@@ -71,7 +71,7 @@
 
 	function win() {
 		if (typeof window !== 'undefined' && window.rybbit) {
-			window.rybbit.event('gp_win');
+			window.rybbit.event(`gp_win${dayNum}`);
 		}
 
 		gameState = 'win';
@@ -87,7 +87,7 @@
 
 	function handleAnswer(e: SubmitEvent) {
 		if (typeof window !== 'undefined' && window.rybbit) {
-			window.rybbit.event('gp_update');
+			window.rybbit.event(`gp_update${dayNum}`);
 		}
 
 		e.preventDefault();
@@ -111,7 +111,7 @@
 
 		if (revealed > 5) {
 			if (typeof window !== 'undefined' && window.rybbit) {
-				window.rybbit.event('gp_loss');
+				window.rybbit.event(`gp_loss${dayNum}`);
 			}
 
 			gameState = 'loss';
