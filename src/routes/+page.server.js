@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "E-ZPass";
-    const friendly = "E-ZPass";
-    const acceptedGuesses = ["ezpass", "ez pass", "e-zpass", "easy pass", "easypass"];
-    const day = "day36";
-    const dayNum = 36;
+    const article = "Air_Force_One";
+    const friendly = "Air Force One";
+    const acceptedGuesses = ["air force one", "air force 1"];
+    const day = "day37";
+    const dayNum = 37;
 
-    const categories = ["1987 introductions",
-        "Companies based in New Jersey",
-        "Toll road authorities of the United States",
-        "Transportation in the United States",
-        "Electronic toll collection",
+    const categories = ["Boeing 747",
+        "1953 establishments in the United States",
+        "United States Air Force",
+        "United States special-purpose aircraft",
+        "Presidential aircraft",
     ]
 
-    const blurb = `E-ZPass Interagency Group (E-ZPass Group trade name and E-ZPass product brand) is an electronic toll collection system used on toll roads, toll bridges, and toll tunnels in the eastern half of the United States. The group itself is composed of several states' member agencies, which share the same technology and allow travelers to use the same transponder on toll facilities throughout the network. It was created in 1987, since which time several states' compatible systems have rebranded to E-ZPass. Negotiations for nationwide interoperability are ongoing.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/c/c7/E-ZPass_Toll_Plaza_-_Spaulding_Turnpike.jpg";
+    const blurb = `Air Force One is the official air traffic control-designated call sign for a United States Air Force aircraft carrying the president of the United States. The term is commonly used to denote U.S. Air Force aircraft modified and used to transport the president, and as a metonym for the primary presidential aircraft, VC-25, although it can be used to refer to any Air Force aircraft the president travels on.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/4/45/United_States_Air_Force_Boeing_VC-25_%2892-9000%29_landing_at_Dayton_International_Airport_%281%29.jpg";
 
     return {
         article,
