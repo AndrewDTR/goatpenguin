@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Leet";
-    const friendly = "Leet";
-    const acceptedGuesses = ["leet", "1337", "l33t", "leetspeak", "leet speak", "l33t speak"];
-    const day = "day38";
-    const dayNum = 38;
+    const article = "Slinky";
+    const friendly = "Slinky";
+    const acceptedGuesses = ["slinky", "slinkey"];
+    const day = "day39";
+    const dayNum = 39;
 
-    const categories = ["Internet memes",
-        "1990s slang",
-        "Latin-script representations",
-        "Encodings",
-        "Nerd culture",
+    const categories = ["1950s fads and trends",
+        "Goods manufactured in the United States",
+        "Collection of the Museum of Modern Art",
+        "Metal toys",
+        "Springs (mechanical)",
     ]
 
-    const blurb = `Leet (or "1337"), also known as eleet, leetspeak, or simply hacker speech, is a system of modified spellings used primarily on the Internet. It often uses character replacements in ways that play on the similarity of their glyphs via reflection or other resemblance. Additionally, it modifies certain words on the basis of a system of suffixes and alternative meanings. There are many dialects or linguistic varieties in different online communities.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/4/40/Laugh-Out-Loud_Cats_736.jpg";
+    const blurb = [`The Slinky is a helical spring toy invented and developed by American naval engineer Richard T. James in 1943 and successfully demonstrated at Gimbels department store in Philadelphia on November 27, 1945.`, `It can perform a number of tricks, including travelling down a flight of steps end-over-end as it stretches and re-forms itself with the aid of gravity and its own momentum; and appearing to levitate for a period of time after it has been dropped. These interesting characteristics have contributed to its success in its home country of the United States, and it has inspired many popular toys with Slinky-like components, in a wide range of countries.`];
+    const img = "https://upload.wikimedia.org/wikipedia/commons/f/f3/2006-02-04_Metal_spiral.jpg";
 
     return {
         article,
