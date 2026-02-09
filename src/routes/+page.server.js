@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Slinky";
-    const friendly = "Slinky";
-    const acceptedGuesses = ["slinky", "slinkey"];
-    const day = "day39";
-    const dayNum = 39;
+    const article = "Richter_scale";
+    const friendly = "Richter scale";
+    const acceptedGuesses = ["richter scale", "richter"];
+    const day = "day40";
+    const dayNum = 40;
 
-    const categories = ["1950s fads and trends",
-        "Goods manufactured in the United States",
-        "Collection of the Museum of Modern Art",
-        "Metal toys",
-        "Springs (mechanical)",
+    const categories = ["American inventions",
+        "California Institute of Technology",
+        "1935 in science",
+        "Logarithmic scales of measurement",
+        "Seismic magnitude scales",
     ]
 
-    const blurb = [`The Slinky is a helical spring toy invented and developed by American naval engineer Richard T. James in 1943 and successfully demonstrated at Gimbels department store in Philadelphia on November 27, 1945.`, `It can perform a number of tricks, including travelling down a flight of steps end-over-end as it stretches and re-forms itself with the aid of gravity and its own momentum; and appearing to levitate for a period of time after it has been dropped. These interesting characteristics have contributed to its success in its home country of the United States, and it has inspired many popular toys with Slinky-like components, in a wide range of countries.`];
-    const img = "https://upload.wikimedia.org/wikipedia/commons/f/f3/2006-02-04_Metal_spiral.jpg";
+    const blurb = `The Richter scale, also called the Richter magnitude scale, Richter's magnitude scale, and the Gutenberg-Richter scale, is a measure of the strength of earthquakes, developed by Charles Richter in collaboration with Beno Gutenberg, and presented in Richter's landmark 1935 paper, where he called it the "magnitude scale". This was later revised and renamed the local magnitude scale, denoted as ML.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/6/62/CharlesRichter.jpg";
 
     return {
         article,
