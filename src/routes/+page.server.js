@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Richter_scale";
-    const friendly = "Richter scale";
-    const acceptedGuesses = ["richter scale", "richter"];
-    const day = "day40";
-    const dayNum = 40;
+    const article = "Scorigami";
+    const friendly = "Scorigami";
+    const acceptedGuesses = ["scorigami", "scora    gami"];
+    const day = "day41";
+    const dayNum = 41;
 
-    const categories = ["American inventions",
-        "California Institute of Technology",
-        "1935 in science",
-        "Logarithmic scales of measurement",
-        "Seismic magnitude scales",
+    const categories = ["Applied statistical analysis",
+        "2014 neologisms",
+        "Sports records and statistics",
+        "NFL culture",
+        "SB Nation",
     ]
 
-    const blurb = `The Richter scale, also called the Richter magnitude scale, Richter's magnitude scale, and the Gutenberg-Richter scale, is a measure of the strength of earthquakes, developed by Charles Richter in collaboration with Beno Gutenberg, and presented in Richter's landmark 1935 paper, where he called it the "magnitude scale". This was later revised and renamed the local magnitude scale, denoted as ML.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/6/62/CharlesRichter.jpg";
+    const blurb = `In sports, a scorigami (a portmanteau of score and origami) is a final score that has never happened before in a sport or league's history. The term was coined in a 2014 article by sportswriter Jon Bois for American football scores in the National Football League (NFL), and is primarily used in this context; it has also been applied sparingly across other sports leagues.`;
+    const img = "img.png";
 
     return {
         article,
