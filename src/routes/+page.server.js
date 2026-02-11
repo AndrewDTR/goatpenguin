@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Scorigami";
-    const friendly = "Scorigami";
-    const acceptedGuesses = ["scorigami", "scora    gami"];
-    const day = "day41";
-    const dayNum = 41;
+    const article = "Poland";
+    const friendly = "Poland";
+    const acceptedGuesses = ["poland"];
+    const day = "day42";
+    const dayNum = 42;
 
-    const categories = ["Applied statistical analysis",
-        "2014 neologisms",
-        "Sports records and statistics",
-        "NFL culture",
-        "SB Nation",
+    const categories = ["States and territories established in 1918",
+        "Republics",
+        "Member states of the European Union",
+        "Member states of the Union for the Mediterranean",
+        "Member states of the Three Seas Initiative",
     ]
 
-    const blurb = `In sports, a scorigami (a portmanteau of score and origami) is a final score that has never happened before in a sport or league's history. The term was coined in a 2014 article by sportswriter Jon Bois for American football scores in the National Football League (NFL), and is primarily used in this context; it has also been applied sparingly across other sports leagues.`;
-    const img = "img.png";
+    const blurb = `Poland, officially the Republic of Poland, is a country in Central Europe. It extends from the Baltic Sea in the north to the Sudetes and Carpathian Mountains in the south. Poland borders Kaliningrad Oblast and Lithuania to the north; Belarus and Ukraine to the east; Slovakia and the Czech Republic to the south; and Germany to the west. The territory has a varied landscape, diverse ecosystems, and a temperate climate. Poland is composed of sixteen voivodeships and is the fifth most populous member state of the European Union (EU), with over 38 million people, and the fifth largest EU country by land area, covering 312,696 km2 (120,733 sq mi). The capital and largest city is Warsaw; other major cities include Kraków, Wrocław, Łódź, Poznań, and Gdańsk.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/8/87/Wawel_%284%29.jpg";
 
     return {
         article,
