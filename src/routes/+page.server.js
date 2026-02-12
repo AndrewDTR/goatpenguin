@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Poland";
-    const friendly = "Poland";
-    const acceptedGuesses = ["poland"];
-    const day = "day42";
-    const dayNum = 42;
+    const article = "Vaporwave";
+    const friendly = "Vaporwave";
+    const acceptedGuesses = ["vaporwave", "vapor wav"];
+    const day = "day43";
+    const dayNum = 43;
 
-    const categories = ["States and territories established in 1918",
-        "Republics",
-        "Member states of the European Union",
-        "Member states of the Union for the Mediterranean",
-        "Member states of the Three Seas Initiative",
+    const categories = ["2010s neologisms",
+        "Counterculture of the 2010s",
+        "Nostalgia",
+        "Cyberpunk culture",
+        "Experimental music genres",
     ]
 
-    const blurb = `Poland, officially the Republic of Poland, is a country in Central Europe. It extends from the Baltic Sea in the north to the Sudetes and Carpathian Mountains in the south. Poland borders Kaliningrad Oblast and Lithuania to the north; Belarus and Ukraine to the east; Slovakia and the Czech Republic to the south; and Germany to the west. The territory has a varied landscape, diverse ecosystems, and a temperate climate. Poland is composed of sixteen voivodeships and is the fifth most populous member state of the European Union (EU), with over 38 million people, and the fifth largest EU country by land area, covering 312,696 km2 (120,733 sq mi). The capital and largest city is Warsaw; other major cities include Kraków, Wrocław, Łódź, Poznań, and Gdańsk.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/8/87/Wawel_%284%29.jpg";
+    const blurb = `Vaporwave is a microgenre of electronic music, an Internet aesthetic and meme that emerged in the late 2000s-early 2010s and became well known in 2015. It is defined partly by its slowed-down, chopped and screwed samples of smooth jazz, elevator music, R&B, and lounge music from the 1980s and 1990s, similar to synthwave. The surrounding subculture is sometimes associated with an ambiguous or satirical take on consumer capitalism and pop culture, and tends to be characterized by a nostalgic or surrealist engagement with the popular entertainment, technology and advertising of previous decades. Visually, it incorporates 1990s Web design and imagery, glitch art, anime, stylized Ancient Greek or Roman sculptures, Memphis Design geometric shapes, 3D-rendered objects, and cyberpunk tropes in its cover artwork and music videos.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/3/31/Wikiwave_00000.png";
 
     return {
         article,
