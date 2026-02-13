@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Vaporwave";
-    const friendly = "Vaporwave";
-    const acceptedGuesses = ["vaporwave", "vapor wav"];
-    const day = "day43";
-    const dayNum = 43;
+    const article = "Magic_square";
+    const friendly = "Magic square";
+    const acceptedGuesses = ["magic square"];
+    const day = "day44";
+    const dayNum = 44;
 
-    const categories = ["2010s neologisms",
-        "Counterculture of the 2010s",
-        "Nostalgia",
-        "Cyberpunk culture",
-        "Experimental music genres",
+    const categories = ["Matrices (mathematics)",
+        "Chinese mathematical discoveries",
+        "Unsolved problems in mathematics",
+        "Squares",
+        "Magic symbols",
     ]
 
-    const blurb = `Vaporwave is a microgenre of electronic music, an Internet aesthetic and meme that emerged in the late 2000s-early 2010s and became well known in 2015. It is defined partly by its slowed-down, chopped and screwed samples of smooth jazz, elevator music, R&B, and lounge music from the 1980s and 1990s, similar to synthwave. The surrounding subculture is sometimes associated with an ambiguous or satirical take on consumer capitalism and pop culture, and tends to be characterized by a nostalgic or surrealist engagement with the popular entertainment, technology and advertising of previous decades. Visually, it incorporates 1990s Web design and imagery, glitch art, anime, stylized Ancient Greek or Roman sculptures, Memphis Design geometric shapes, 3D-rendered objects, and cyberpunk tropes in its cover artwork and music videos.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/3/31/Wikiwave_00000.png";
+    const blurb = `In mathematics, especially historical and recreational mathematics, a square array of numbers, usually positive integers, is called a magic square if the sums of the numbers in each row, each column, and both main diagonals are the same. The order of the magic square is the number of integers along one side (n), and the constant sum is called the magic constant.`;
+    const img = "a.png";
 
     return {
         article,
