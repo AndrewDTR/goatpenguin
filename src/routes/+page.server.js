@@ -5,20 +5,20 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Magic_square";
-    const friendly = "Magic square";
-    const acceptedGuesses = ["magic square"];
-    const day = "day44";
-    const dayNum = 44;
+    const article = "Redshift";
+    const friendly = "Redshift";
+    const acceptedGuesses = ["redshift", "red shift", "redshifting", "red shifting"];
+    const day = "day45";
+    const dayNum = 45;
 
-    const categories = ["Matrices (mathematics)",
-        "Chinese mathematical discoveries",
-        "Unsolved problems in mathematics",
-        "Squares",
-        "Magic symbols",
+    const categories = ["Concepts in astronomy",
+        "Physical cosmology",
+        "Effects of gravity",
+        "Astronomical spectroscopy",
+        "Doppler effects",
     ]
 
-    const blurb = `In mathematics, especially historical and recreational mathematics, a square array of numbers, usually positive integers, is called a magic square if the sums of the numbers in each row, each column, and both main diagonals are the same. The order of the magic square is the number of integers along one side (n), and the constant sum is called the magic constant.`;
+    const blurb = `In physics, a redshift is an increase in the wavelength, or equivalently, a decrease in the frequency, of electromagnetic radiation (such as light). The opposite change, a decrease in wavelength and increase in frequency and energy, is known as a blueshift.`;
     const img = "a.png";
 
     return {
