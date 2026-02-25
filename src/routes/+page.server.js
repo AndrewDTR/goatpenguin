@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Redshift";
-    const friendly = "Redshift";
-    const acceptedGuesses = ["redshift", "red shift", "redshifting", "red shifting"];
-    const day = "day45";
-    const dayNum = 45;
+    const article = "Allura_Red_AC";
+    const friendly = "Allura Red AC";
+    const acceptedGuesses = ["red 40", "allura red ac", "red forty"];
+    const day = "day46";
+    const dayNum = 46;
 
-    const categories = ["Concepts in astronomy",
-        "Physical cosmology",
-        "Effects of gravity",
-        "Astronomical spectroscopy",
-        "Doppler effects",
+    const categories = ["20th-century inventions",
+        "1971 in science",
+        "E-number additives",
+        "Benzenesulfonates",
+        "Food colorings",
     ]
 
-    const blurb = `In physics, a redshift is an increase in the wavelength, or equivalently, a decrease in the frequency, of electromagnetic radiation (such as light). The opposite change, a decrease in wavelength and increase in frequency and energy, is known as a blueshift.`;
-    const img = "a.png";
+    const blurb = [`Allura Red AC, also known as FD&C Red 40 or E129, is a red azo dye commonly used in food. It was developed in 1971 by the Allied Chemical Corporation.`, `It is usually supplied as its red sodium salt but can also be used as the calcium and potassium salts. These salts are soluble in water. In solution, its maximum absorbance lies at about 504 nm.`]
+    const img = "https://upload.wikimedia.org/wikipedia/commons/a/af/Strawberry_soda.jpg";
 
     return {
         article,
