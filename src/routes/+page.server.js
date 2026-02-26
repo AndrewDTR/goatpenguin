@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Allura_Red_AC";
-    const friendly = "Allura Red AC";
-    const acceptedGuesses = ["red 40", "allura red ac", "red forty"];
-    const day = "day46";
-    const dayNum = 46;
+    const article = "E3";
+    const friendly = "E3";
+    const acceptedGuesses = ["e3", "e 3", "e three", "ethree", "electronic entertainment expo"];
+    const day = "day47";
+    const dayNum = 47;
 
-    const categories = ["20th-century inventions",
-        "1971 in science",
-        "E-number additives",
-        "Benzenesulfonates",
-        "Food colorings",
+    const categories = ["Annual events in Los Angeles County, California",
+        "2023 disestablishments in California",
+        "Trade shows in the United States",
+        "Organizations disestablished due to the COVID-19 pandemic",
+        "Video gaming in the United States",
     ]
 
-    const blurb = [`Allura Red AC, also known as FD&C Red 40 or E129, is a red azo dye commonly used in food. It was developed in 1971 by the Allied Chemical Corporation.`, `It is usually supplied as its red sodium salt but can also be used as the calcium and potassium salts. These salts are soluble in water. In solution, its maximum absorbance lies at about 504 nm.`]
-    const img = "https://upload.wikimedia.org/wikipedia/commons/a/af/Strawberry_soda.jpg";
+    const blurb = `E3 (short for Electronic Entertainment Expo) was an annual trade event for the video game industry organized and presented by the Entertainment Software Association (ESA). It was held principally in Los Angeles from 1995 to 2019, with its final iteration held virtually in 2021. The event hosted developers, publishers, hardware manufacturers, and other industry professionals who used the occasion to introduce and advertise upcoming games, hardware, and merchandise to the press. During its existence, E3 was the world's largest and most prestigious annual gaming expo.`;
+    const img = "a.png";
 
     return {
         article,
