@@ -13,7 +13,7 @@ export async function load({ url }) {
 
     const categories = ["Political neologisms",
         "Appeals to emotion",
-        "Political terminology of the United States",
+        "American political catchphrases",
         "Childhood",
         "Rhetoric",
     ]
