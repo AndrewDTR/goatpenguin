@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Think_of_the_children";
-    const friendly = "Think of the children";
-    const acceptedGuesses = ["wont someone think of the children", "wont someone please think of the children", "think of the children", "please think of the children", "wont anyone please think of the children", "wont anyone think of the children", "what about the children", "please what about the children"];
-    const day = "day48";
-    const dayNum = 48;
+    const article = "Ambigram";
+    const friendly = "Ambigram";
+    const acceptedGuesses = ["ambigram"];
+    const day = "day49";
+    const dayNum = 49;
 
-    const categories = ["Political neologisms",
-        "Appeals to emotion",
-        "American political catchphrases",
-        "Childhood",
-        "Rhetoric",
+    const categories = ["1983 neologisms",
+        "Calligraphy",
+        "Constrained writing",
+        "Wordplay",
+        "Rotational symmetry",
     ]
 
-    const blurb = `"Think of the children" (also "What about the children?") is a cliché that evolved into a rhetorical tactic. In the literal sense, it refers to children's rights (as in discussions of child labor). In debate, it is a plea for pity that is used as an appeal to emotion, and therefore may become a logical fallacy.`;
-    const img = "https://upload.wikimedia.org/wikipedia/en/transcoded/e/e1/Think_of_the_children.webm/Think_of_the_children.webm.360p.webm";
+    const blurb = [`An ambigram is a calligraphic composition of glyphs (letters, numbers, symbols or other shapes) that can yield different meanings depending on the orientation of observation. Most ambigrams are visual palindromes that rely on some kind of symmetry, and they can often be interpreted as visual puns. Although the concept is older, the term "ambigram" was coined by Douglas Hofstadter in 1983–1984.`, `Most often, ambigrams appear as visually symmetrical words. When flipped, they remain unchanged, or they mutate to reveal another meaning. "Half-turn" ambigrams undergo a point reflection (180-degree rotational symmetry) and can be read upside down (for example, the word "swims"), while mirror ambigrams have axial symmetry and can be read through a reflective surface like a mirror. Many other types of ambigrams exist.`]
+    const img = "https://upload.wikimedia.org/wikipedia/commons/4/44/Ambigram_of_the_word_ambigram_-_rotation_animation.gif";
 
     return {
         article,

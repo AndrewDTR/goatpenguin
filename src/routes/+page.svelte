@@ -271,10 +271,10 @@
 			</div>
 			<div class="mt-1">
 				{#if img !== null}
-					<video
-						class="my-2 h-64 w-auto border border-white p-2 sm:float-none md:float-right md:m-4"
+					<img
+						class="my-2 h-72 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
 						src={img}
-						controls
+						alt={`${friendly} Wikipedia article image`}
 					/>
 				{/if}
 				{#if typeof blurb === 'string'}
