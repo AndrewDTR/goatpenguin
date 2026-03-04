@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Ambigram";
-    const friendly = "Ambigram";
-    const acceptedGuesses = ["ambigram"];
-    const day = "day49";
-    const dayNum = 49;
+    const article = "Stonewall_Inn";
+    const friendly = "Stonewall Inn";
+    const acceptedGuesses = ["stonewall", "stonewall inn", "stonewall riots"];
+    const day = "day50";
+    const dayNum = 50;
 
-    const categories = ["1983 neologisms",
-        "Calligraphy",
-        "Constrained writing",
-        "Wordplay",
-        "Rotational symmetry",
+    const categories = ["1967 establishments in New York City",
+        "Cultural history of New York City",
+        "Drinking establishments in Greenwich Village",
+        "National Historic Landmarks in Manhattan",
+        "LGBTQ drinking establishments in New York City",
     ]
 
-    const blurb = [`An ambigram is a calligraphic composition of glyphs (letters, numbers, symbols or other shapes) that can yield different meanings depending on the orientation of observation. Most ambigrams are visual palindromes that rely on some kind of symmetry, and they can often be interpreted as visual puns. Although the concept is older, the term "ambigram" was coined by Douglas Hofstadter in 1983–1984.`, `Most often, ambigrams appear as visually symmetrical words. When flipped, they remain unchanged, or they mutate to reveal another meaning. "Half-turn" ambigrams undergo a point reflection (180-degree rotational symmetry) and can be read upside down (for example, the word "swims"), while mirror ambigrams have axial symmetry and can be read through a reflective surface like a mirror. Many other types of ambigrams exist.`]
-    const img = "https://upload.wikimedia.org/wikipedia/commons/4/44/Ambigram_of_the_word_ambigram_-_rotation_animation.gif";
+    const blurb = `The Stonewall Inn (also known as Stonewall) is a gay bar and recreational tavern at 53 Christopher Street in the Greenwich Village neighborhood of Lower Manhattan in New York City. It was the site of the 1969 Stonewall riots, which led to the gay liberation movement and the modern fight for LGBTQ rights in the United States. When the riots occurred, Stonewall was one of the relatively few gay bars in New York City. The original gay bar occupied two structures at 51–53 Christopher Street, which were built as horse stables in the 1840s.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/c/ce/Stonewall_Inn_5_pride_weekend_2016.jpg";
 
     return {
         article,
