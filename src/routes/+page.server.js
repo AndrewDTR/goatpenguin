@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Stonewall_Inn";
-    const friendly = "Stonewall Inn";
-    const acceptedGuesses = ["stonewall", "stonewall inn", "stonewall riots"];
-    const day = "day50";
-    const dayNum = 50;
+    const article = "Women_and_children_first";
+    const friendly = "Women and children first";
+    const acceptedGuesses = ["women and children first", "women and the children first", "the women and the children first", "children and women first"];
+    const day = "day51";
+    const dayNum = 51;
 
-    const categories = ["1967 establishments in New York City",
-        "Cultural history of New York City",
-        "Drinking establishments in Greenwich Village",
-        "National Historic Landmarks in Manhattan",
-        "LGBTQ drinking establishments in New York City",
+    const categories = ["Chivalry",
+        "1840s quotations",
+        "Women's rights",
+        "Sinking of RMS Titanic",
+        "Lifeboats",
     ]
 
-    const blurb = `The Stonewall Inn (also known as Stonewall) is a gay bar and recreational tavern at 53 Christopher Street in the Greenwich Village neighborhood of Lower Manhattan in New York City. It was the site of the 1969 Stonewall riots, which led to the gay liberation movement and the modern fight for LGBTQ rights in the United States. When the riots occurred, Stonewall was one of the relatively few gay bars in New York City. The original gay bar occupied two structures at 51–53 Christopher Street, which were built as horse stables in the 1840s.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/c/ce/Stonewall_Inn_5_pride_weekend_2016.jpg";
+    const blurb = [`"Women and children first", known to a lesser extent as the Birkenhead drill, is an unofficial code of conduct and gender role whereby the lives of women and children were to be saved first in a life-threatening situation, typically abandoning ship, when survival resources such as lifeboats were limited.`, `In the 19th and early 20th century, "women and children first" was seen as a chivalric ideal. The concept "was celebrated among Victorian and Edwardian commentators as a long-standing practice - a 'tradition', 'law of human nature', 'the ancient chivalry of the sea', 'handed down in the race'." Its practice was featured in accounts of some 18th-century shipwrecks with greater public awareness during the 19th century.`];
+    const img = "https://upload.wikimedia.org/wikipedia/commons/3/37/Wreck_of_the_Birkenhead.jpg";
 
     return {
         article,
