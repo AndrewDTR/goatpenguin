@@ -270,13 +270,17 @@
 				</a>
 			</div>
 			<div class="mt-1">
-				{#if img !== null}
-					<img
-						class="my-2 h-72 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
-						src={img}
-						alt={`${friendly} Wikipedia article image`}
-					/>
-				{/if}
+				<iframe
+					class="my-2 h-64 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
+					width="540"
+					height="295"
+					src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=kkO0qqw58TU2sjkq&autoplay=1"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				></iframe>
 				{#if typeof blurb === 'string'}
 					<p class="text-white">{blurb}</p>
 				{:else if Array.isArray(blurb)}

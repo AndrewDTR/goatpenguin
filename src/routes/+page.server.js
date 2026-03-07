@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "WinRAR";
-    const friendly = "WinRAR";
-    const acceptedGuesses = ["winrar", "win rar"];
-    const day = "day52";
-    const dayNum = 52;
+    const article = "Rickrolling";
+    const friendly = "Rickrolling";
+    const acceptedGuesses = ["rickrolling", "rickroll", "rick roll", "never gonna give you up"];
+    const day = "day53";
+    const dayNum = 53;
 
-    const categories = ["1995 software",
-        "Disk image extractors",
-        "Windows-only trialware",
-        "File archivers",
-        "Windows compression software",
+    const categories = ["2007 neologisms",
+        "Internet memes introduced in 2007",
+        "Internet trolling",
+        "Pop music",
+        "Viral videos",
     ]
 
-    const blurb = `WinRAR is a trialware file archiver and compression utility for Microsoft Windows, developed by Eugene Roshal of win.rar GmbH (RARLAB) since 1995. It can create and view archives in RAR (a format created by Roshal) or ZIP file formats, and unpack numerous archive file formats. To enable the user to test the integrity of archives, WinRAR embeds CRC-32 or BLAKE2 checksums for each file in each archive. WinRAR supports creating encrypted, multi-part and self-extracting archives.`;
-    const img = "https://upload.wikimedia.org/wikipedia/en/4/43/WinRAR_7.10_screenshot.png";
+    const blurb = `Rickrolling is an Internet meme and prank involving the unexpected appearance of the 1987 hit song "Never Gonna Give You Up", performed by English singer Rick Astley, or its music video. The meme is a type of bait and switch, usually using a disguised hyperlink that leads to the music video instead of what was expected. The meme has also extended to using the song's lyrics in unexpected contexts or singing it during public events. After the origin of the meme in 2007 and the height of its popularity in 2008, rickrolling has become a very long-lived meme. Astley has seen his performance career revitalised by the meme's popularity.`;
+    const img = null;
 
     return {
         article,
