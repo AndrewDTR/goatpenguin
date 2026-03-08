@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Rickrolling";
-    const friendly = "Rickrolling";
-    const acceptedGuesses = ["rickrolling", "rickroll", "rick roll", "never gonna give you up"];
-    const day = "day53";
-    const dayNum = 53;
+    const article = "Big_Ben";
+    const friendly = "Big Ben";
+    const acceptedGuesses = ["big ben", "great clock of westminster"];
+    const day = "day54";
+    const dayNum = 54;
 
-    const categories = ["2007 neologisms",
-        "Internet memes introduced in 2007",
-        "Internet trolling",
-        "Pop music",
-        "Viral videos",
+    const categories = ["1859 establishments in England",
+        "Gothic Revival architecture in London",
+        "National government buildings in London",
+        "Tourist attractions in the City of Westminster",
+        "Bell towers in the United Kingdom",
     ]
 
-    const blurb = `Rickrolling is an Internet meme and prank involving the unexpected appearance of the 1987 hit song "Never Gonna Give You Up", performed by English singer Rick Astley, or its music video. The meme is a type of bait and switch, usually using a disguised hyperlink that leads to the music video instead of what was expected. The meme has also extended to using the song's lyrics in unexpected contexts or singing it during public events. After the origin of the meme in 2007 and the height of its popularity in 2008, rickrolling has become a very long-lived meme. Astley has seen his performance career revitalised by the meme's popularity.`;
-    const img = null;
+    const blurb = [`Big Ben is the nickname for the Great Bell of the Great Clock of Westminster, and, by extension, for the clock tower which stands at the north end of the Palace of Westminster in London, England. Originally named the Clock Tower, the structure was renamed the Elizabeth Tower in 2012 to mark the Diamond Jubilee of Queen Elizabeth II. The clock is a striking clock with five bells.`, `The tower was designed by Augustus Pugin and Sir Charles Barry in the Perpendicular Gothic style and was completed in 1859. It is decorated with stone carvings and features symbols related to the four countries of the United Kingdom and the Tudor dynasty. A Latin inscription celebrates Queen Victoria, under whose reign the palace was built. It stands 316 feet (96 m) tall, and the climb from ground level to the belfry is 334 steps. Its base is square, measuring 40 feet (12 m) on each side. The dials of the clock are 22.5 feet (6.9 m) in diameter.`];
+    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Elizabeth_Tower%2C_June_2022.jpg/960px-Elizabeth_Tower%2C_June_2022.jpg";
 
     return {
         article,
