@@ -161,14 +161,16 @@
 				src="/goatpenguin.png"
 				alt="Goat with a penguin shirt on"
 			/>
-			
+
 			<p
 				class="inline-block min-w-0 -translate-y-1 bg-linear-to-r from-indigo-200 to-indigo-400 bg-clip-text text-4xl leading-[1.15] font-bold text-transparent sm:text-6xl"
 			>
 				goatpenguin
 			</p>
 
-			<p class="shrink-0 font-bold text-white">by <a class="underline hover:italic" href="https://www.amoses.dev">Andrew</a></p>
+			<p class="shrink-0 font-bold text-white">
+				by <a class="underline hover:italic" href="https://www.amoses.dev">Andrew</a>
+			</p>
 		</div>
 
 		<p class="mt-4 text-white">
@@ -195,13 +197,17 @@
 				{/each}
 			</div>
 
-			<form class="mt-4 w-full" onsubmit={handleAnswer}>
+			<form class="mt-4 flex w-full" onsubmit={handleAnswer}>
 				<input
 					bind:value={answer}
 					required
-					class="block h-12 w-full"
+					class="block h-12 w-full border border-r-0 border-gray-500"
 					placeholder="Place your guess here"
 				/>
+				<button
+					class="w-12 cursor-pointer border border-l-0 border-gray-500 bg-gray-300 hover:bg-gray-400"
+					>⏎</button
+				>
 			</form>
 
 			<div class="mt-2">
