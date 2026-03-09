@@ -168,7 +168,7 @@
 				goatpenguin
 			</p>
 
-			<p class="shrink-0 font-bold text-white">by Draw</p>
+			<p class="shrink-0 font-bold text-white">by <a class="underline hover:italic" href="https://www.amoses.dev">Andrew</a></p>
 		</div>
 
 		<p class="mt-4 text-white">
