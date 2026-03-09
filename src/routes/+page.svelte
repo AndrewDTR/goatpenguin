@@ -186,7 +186,7 @@
 
 		{#if gameState === 'guessing'}
 			<div class="mt-4">
-				{#each categories as category, idx}
+				{#each categories as category, idx (category)}
 					<div
 						class={`flex h-12 w-full items-center justify-center border border-indigo-500 text-white italic ${bgClass[500 + idx * 100]}`}
 					>
@@ -205,7 +205,7 @@
 			</form>
 
 			<div class="mt-2">
-				{#each guesses as guess}
+				{#each guesses as guess (guess)}
 					<div class="mb-1 flex border-2 border-white">
 						<p class="p-2 text-lg text-white">❌ {guess}</p>
 					</div>
@@ -269,6 +269,7 @@
 					</p>
 				</a>
 			</div>
+
 			<div class="mt-1">
 				{#if img !== null}
 					<img
@@ -280,7 +281,7 @@
 				{#if typeof blurb === 'string'}
 					<p class="text-white">{blurb}</p>
 				{:else if Array.isArray(blurb)}
-					{#each blurb as paragraph}
+					{#each blurb as paragraph (paragraph)}
 						<p class="mb-4 text-white">{paragraph}</p>
 					{/each}
 				{/if}
@@ -293,6 +294,32 @@
 				class="active:border-purple:800 mt-2 h-12 w-64 cursor-pointer border border-purple-700 bg-purple-900 text-white hover:border-purple-800 hover:bg-purple-950 active:bg-purple-600"
 				>{copied ? 'Copied to clipboard! ✅' : 'Copy game result to clipboard 📋'}</button
 			>
+
+			<details class="mt-2 text-white">
+				<summary class="text-zinc-400 underline">View hints and guesses</summary>
+				<div class="mt-2">
+					{#each categories as category, idx (category)}
+						<div
+							class={`flex h-12 w-full items-center justify-center border border-indigo-500 text-white italic ${bgClass[500 + idx * 100]} border-dashed`}
+						>
+							{category}
+						</div>
+					{/each}
+				</div>
+
+				<div class="mt-2">
+					{#each guesses.slice(0, guesses.length - 1) as guess (guess)}
+						<div class="flex border-2 border-dashed border-white">
+							<p class="p-2 text-lg text-white">❌ {guess}</p>
+						</div>
+					{/each}
+					{#if gameState === 'win'}
+						<div class="flex border-2 border-dashed border-white">
+							<p class="p-2 text-lg text-white">✅ {guesses[guesses.length - 1]}</p>
+						</div>
+					{/if}
+				</div>
+			</details>
 		{/if}
 	</div>
 </div>
