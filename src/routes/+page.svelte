@@ -205,7 +205,7 @@
 			</form>
 
 			<div class="mt-2">
-				{#each guesses as guess (guess)}
+				{#each guesses as guess, idx (idx)}
 					<div class="mb-1 flex border-2 border-white">
 						<p class="p-2 text-lg text-white">❌ {guess}</p>
 					</div>
@@ -308,7 +308,7 @@
 				</div>
 
 				<div class="mt-2">
-					{#each guesses.slice(0, guesses.length - 1) as guess (guess)}
+					{#each gameState === 'win' ? guesses.slice(0, guesses.length - 1) : guesses as guess, idx (idx)}
 						<div class="flex border-2 border-dashed border-white">
 							<p class="p-2 text-lg text-white">❌ {guess}</p>
 						</div>
