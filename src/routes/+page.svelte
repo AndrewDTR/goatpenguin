@@ -152,7 +152,7 @@
 <div class="flex min-h-screen w-full flex-wrap justify-center">
 	<div class="m-4 flex max-w-3xl flex-col">
 		<div
-			class="flex h-auto flex-wrap items-center justify-center gap-2
+			class="flex h-auto flex-wrap items-center justify-center gap-x-2
          border border-indigo-800 bg-indigo-950 p-2
          sm:h-20 sm:flex-nowrap"
 		>
@@ -161,7 +161,7 @@
 				src="/goatpenguin.png"
 				alt="Goat with a penguin shirt on"
 			/>
-
+			
 			<p
 				class="inline-block min-w-0 -translate-y-1 bg-linear-to-r from-indigo-200 to-indigo-400 bg-clip-text text-4xl leading-[1.15] font-bold text-transparent sm:text-6xl"
 			>
