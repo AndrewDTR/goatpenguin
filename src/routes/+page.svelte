@@ -296,7 +296,7 @@
 			>
 
 			<details class="mt-2 text-white">
-				<summary class="text-zinc-400 underline">View hints and guesses</summary>
+				<summary class="text-gray-400 underline">View hints and guesses</summary>
 				<div class="mt-2">
 					{#each categories as category, idx (category)}
 						<div
