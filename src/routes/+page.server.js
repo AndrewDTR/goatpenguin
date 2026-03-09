@@ -5,22 +5,22 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Big_Ben";
-    const friendly = "Big Ben";
-    const acceptedGuesses = ["big ben", "great clock of westminster"];
-    const day = "day54";
-    const dayNum = 54;
+    const article = "Kombucha";
+    const friendly = "Kombucha";
+    const acceptedGuesses = ["kombucha", "kombucha tea", "tea mushroom", "tea fungus"];
+    const day = "day55";
+    const dayNum = 55;
 
-    const categories = ["1859 establishments in England",
-        "Gothic Revival architecture in London",
-        "National government buildings in London",
-        "Tourist attractions in the City of Westminster",
-        "Bell towers in the United Kingdom",
+    const categories = ["Alternative medicine",
+        "2010s in food",
+        "Carbonated drinks",
+        "Fermented drinks",
+        "Chinese teas",
     ]
 
-    const blurb = [`Big Ben is the nickname for the Great Bell of the Great Clock of Westminster, and, by extension, for the clock tower which stands at the north end of the Palace of Westminster in London, England. Originally named the Clock Tower, the structure was renamed the Elizabeth Tower in 2012 to mark the Diamond Jubilee of Queen Elizabeth II. The clock is a striking clock with five bells.`, `The tower was designed by Augustus Pugin and Sir Charles Barry in the Perpendicular Gothic style and was completed in 1859. It is decorated with stone carvings and features symbols related to the four countries of the United Kingdom and the Tudor dynasty. A Latin inscription celebrates Queen Victoria, under whose reign the palace was built. It stands 316 feet (96 m) tall, and the climb from ground level to the belfry is 334 steps. Its base is square, measuring 40 feet (12 m) on each side. The dials of the clock are 22.5 feet (6.9 m) in diameter.`];
-    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Elizabeth_Tower%2C_June_2022.jpg/960px-Elizabeth_Tower%2C_June_2022.jpg";
-
+    const blurb = [`Kombucha (also tea mushroom, tea fungus, or Manchurian mushroom when referring to the culture; Latin name Medusomyces gisevii) is a fermented, effervescent and sweetened black tea drink. Sometimes the beverage is called kombucha tea to distinguish it from the culture of bacteria and yeast. Juice, spices, fruit, or other flavorings are often added. Commercial kombucha contains small amounts of alcohol.`, `Kombucha is believed to have originated in China, where the drink is traditional. While it is named after the Japanese term for kelp tea in English, the two drinks have no relation. By the early 20th century kombucha spread to Russia, then other parts of Eastern Europe and Germany. Kombucha is now homebrewed globally, and also bottled and sold commercially. The global kombucha market was worth approximately US$1.7 billion as of 2019.`];
+    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Kombucha_Store_Shelves.jpg/960px-Kombucha_Store_Shelves.jpg";
+    
     return {
         article,
         friendly,
