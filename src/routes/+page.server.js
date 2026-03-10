@@ -7,7 +7,7 @@ export async function load({ url }) {
 
     const article = "Butterfly_effect";
     const friendly = "Butterfly effect";
-    const acceptedGuesses = ["kombucha", "kombucha tea", "tea mushroom", "tea fungus"];
+    const acceptedGuesses = ["butterfly effect"];
     const day = "day56";
     const dayNum = 56;
 
