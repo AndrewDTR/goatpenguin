@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Kombucha";
-    const friendly = "Kombucha";
+    const article = "Butterfly_effect";
+    const friendly = "Butterfly effect";
     const acceptedGuesses = ["kombucha", "kombucha tea", "tea mushroom", "tea fungus"];
-    const day = "day55";
-    const dayNum = 55;
+    const day = "day56";
+    const dayNum = 56;
 
-    const categories = ["Alternative medicine",
-        "2010s in food",
-        "Carbonated drinks",
-        "Fermented drinks",
-        "Chinese teas",
+    const categories = ["Physical phenomena",
+        "Causality",
+        "Chaos theory",
+        "Determinism",
+        "Metaphors referring to insects",
     ]
 
-    const blurb = [`Kombucha (also tea mushroom, tea fungus, or Manchurian mushroom when referring to the culture; Latin name Medusomyces gisevii) is a fermented, effervescent and sweetened black tea drink. Sometimes the beverage is called kombucha tea to distinguish it from the culture of bacteria and yeast. Juice, spices, fruit, or other flavorings are often added. Commercial kombucha contains small amounts of alcohol.`, `Kombucha is believed to have originated in China, where the drink is traditional. While it is named after the Japanese term for kelp tea in English, the two drinks have no relation. By the early 20th century kombucha spread to Russia, then other parts of Eastern Europe and Germany. Kombucha is now homebrewed globally, and also bottled and sold commercially. The global kombucha market was worth approximately US$1.7 billion as of 2019.`];
-    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Kombucha_Store_Shelves.jpg/960px-Kombucha_Store_Shelves.jpg";
+    const blurb = [`In chaos theory, the butterfly effect is the sensitive dependence on initial conditions in which a small change in one state of a deterministic nonlinear system can result in large differences in a later state.`, `The term is closely associated with the work of the mathematician and meteorologist Edward Norton Lorenz. He noted that the butterfly effect is derived from the example of the details of a tornado (the exact time of formation, the exact path taken) being influenced by minor perturbations such as a distant butterfly flapping its wings several weeks earlier. Lorenz originally used a seagull causing a storm but was persuaded to make it more poetic with the use of a butterfly and tornado by 1972. He discovered the effect when he observed runs of his weather model with initial condition data that were rounded in a seemingly inconsequential manner. He noted that the weather model would fail to reproduce the results of runs with the unrounded initial condition data. A very small change in initial conditions had created a significantly different outcome.`];
+    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Double_pendulum_simultaneous_realisations.ogv/960px--Double_pendulum_simultaneous_realisations.ogv.jpg";
     
     return {
         article,
