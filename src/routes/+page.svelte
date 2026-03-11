@@ -190,7 +190,7 @@
 			<div class="mt-4">
 				{#each categories as category, idx (category)}
 					<div
-						class={`${idx == (revealed - 1) ? "font-bold" : ""} flex h-12 w-full items-center justify-center border border-indigo-500 text-white italic ${bgClass[500 + idx * 100]}`}
+						class={`${idx == revealed - 1 ? 'font-bold' : ''} flex h-12 w-full items-center justify-center border border-indigo-500 text-white italic ${bgClass[500 + idx * 100]}`}
 					>
 						{idx <= revealed - 1 ? category : '???'}
 					</div>
@@ -279,7 +279,7 @@
 			<div class="mt-1">
 				{#if img !== null}
 					<img
-						class="my-2 h-52 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
+						class="my-2 h-64 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
 						src={img}
 						alt={`${friendly} Wikipedia article image`}
 					/>
