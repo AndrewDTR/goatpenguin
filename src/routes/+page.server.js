@@ -7,7 +7,7 @@ export async function load({ url }) {
 
     const article = "Let_them_eat_cake";
     const friendly = "Let them eat cake";
-    const acceptedGuesses = ["flappy bird"];
+    const acceptedGuesses = ["let them eat cake", "have them eat cake"];
     const day = "day59";
     const dayNum = 59;
 
