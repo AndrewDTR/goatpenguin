@@ -5,22 +5,22 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Let_them_eat_cake";
-    const friendly = "Let them eat cake";
-    const acceptedGuesses = ["let them eat cake", "have them eat cake"];
-    const day = "day59";
-    const dayNum = 59;
+    const article = "R/place";
+    const friendly = "r/place";
+    const acceptedGuesses = ["r place", "r/place", "place"];
+    const day = "day60";
+    const dayNum = 60;
 
-    const categories = ["1760s neologisms",
-        "English phrases",
-        "Political quotes",
-        "Metaphors referring to food and drink",
-        "Works by Jean-Jacques Rousseau",
+    const categories = ["Internet properties established in 2017",
+        "Computer art",
+        "Group processes",
+        "April Fools' Day",
+        "Subreddits",
     ]
 
-    const blurb = [`"Let them eat cake" is the traditional translation of the French phrase "Qu'ils mangent de la brioche", said to have been spoken in the 18th century by "a great princess" upon being told that the peasants had no bread. The French phrase mentions brioche, a bread enriched with butter and eggs, considered a luxury food. The quote is taken to reflect either the princess's frivolous disregard for the starving peasants or her poor understanding of their plight.`, `Although the phrase is conventionally attributed to Marie Antoinette, there is no evidence that she ever uttered it, and it is now generally regarded as a journalistic cliché. The phrase can actually be traced back to Jean-Jacques Rousseau's Confessions in 1765, 24 years prior to the French Revolution, and when Antoinette was nine years old and had never been to France. The phrase was not attributed to Antoinette until decades after her death.`];
-    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Allan_Ramsay_-_Jean-Jacques_Rousseau_%281712_-_1778%29_-_Google_Art_Project.jpg/1280px-Allan_Ramsay_-_Jean-Jacques_Rousseau_%281712_-_1778%29_-_Google_Art_Project.jpg";
-    
+    const blurb = [`r/place was a recurring collaborative project and social experiment hosted on the content aggregator site Reddit. Originally launched on April Fools' Day 2017, it has since been repeated again on April Fools' Day 2022 and on July 20, 2023.`, `The 2017 experiment involved an online canvas located at a subreddit called r/place. Registered users could edit the canvas by changing the color of a single pixel with a replacement from a 16-color palette. After each pixel was placed, a timer prevented the user from placing any more pixels for a period of time varying from 5 to 20 minutes (depending on whether the user had verified their email address). The idea of the experiment was conceived by Josh Wardle.`];
+    const img = "https://upload.wikimedia.org/wikipedia/en/a/a0/RPlace2017.png";
+
     return {
         article,
         friendly,
