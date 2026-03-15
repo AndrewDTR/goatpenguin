@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "R/place";
-    const friendly = "r/place";
-    const acceptedGuesses = ["r place", "r/place", "place"];
-    const day = "day60";
-    const dayNum = 60;
+    const article = "Major-General%27s_Song";
+    const friendly = "Major-General's Song";
+    const acceptedGuesses = ["modern major general", "major general", "major general song", "major general's song", "major-general's song", "i am the very model of a modern major general", "i am the very model of a modern-major general", "i am the very model of", "i'm the very model of", "i'm the very model of a modern major general"];
+    const day = "day61";
+    const dayNum = 61;
 
-    const categories = ["Internet properties established in 2017",
-        "Computer art",
-        "Group processes",
-        "April Fools' Day",
-        "Subreddits",
+    const categories = ["Gilbert and Sullivan",
+        "1879 songs",
+        "The Pirates of Penzance",
+        "Songs about science",
+        "Songs about military officers",
     ]
 
-    const blurb = [`r/place was a recurring collaborative project and social experiment hosted on the content aggregator site Reddit. Originally launched on April Fools' Day 2017, it has since been repeated again on April Fools' Day 2022 and on July 20, 2023.`, `The 2017 experiment involved an online canvas located at a subreddit called r/place. Registered users could edit the canvas by changing the color of a single pixel with a replacement from a 16-color palette. After each pixel was placed, a timer prevented the user from placing any more pixels for a period of time varying from 5 to 20 minutes (depending on whether the user had verified their email address). The idea of the experiment was conceived by Josh Wardle.`];
-    const img = "https://upload.wikimedia.org/wikipedia/en/a/a0/RPlace2017.png";
+    const blurb = `"I Am the Very Model of a Modern Major-General" (often referred to as the "Major-General's Song" or "Modern Major-General's Song") is a patter song from Gilbert and Sullivan's 1879 comic opera The Pirates of Penzance. It has been called the most famous Gilbert and Sullivan patter song. Sung by Major-General Stanley at his first entrance, towards the end of Act I, the character introduces himself by presenting his résumé as a polymath but admitting to fundamental shortcomings. He claims a wide range of classical, historical and scientific knowledge but admits that he knows little of military tactics, weapons or jargon. The song thereby satirises the idea of the "modern" educated British Army officer of the latter 19th century.`
+    const img = "https://upload.wikimedia.org/wikipedia/commons/d/dd/LyttonMajorGeneral.gif";
 
     return {
         article,
