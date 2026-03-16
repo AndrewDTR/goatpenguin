@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Major-General%27s_Song";
-    const friendly = "Major-General's Song";
-    const acceptedGuesses = ["modern major general", "major general", "major general song", "major general's song", "major-general's song", "i am the very model of a modern major general", "i am the very model of a modern-major general", "i am the very model of", "i'm the very model of", "i'm the very model of a modern major general"];
-    const day = "day61";
-    const dayNum = 61;
+    const article = "Streisand_effect";
+    const friendly = "Streisand effect";
+    const acceptedGuesses = ["streisand effect", "streishand effect", "strisehand effect", "striseand effect"];
+    const day = "day62";
+    const dayNum = 62;
 
-    const categories = ["Gilbert and Sullivan",
-        "1879 songs",
-        "The Pirates of Penzance",
-        "Songs about science",
-        "Songs about military officers",
+    const categories = ["2005 neologisms",
+        "Malibu, California",
+        "Eponyms",
+        "Privacy controversies",
+        "Internet censorship in the United States",
     ]
 
-    const blurb = `"I Am the Very Model of a Modern Major-General" (often referred to as the "Major-General's Song" or "Modern Major-General's Song") is a patter song from Gilbert and Sullivan's 1879 comic opera The Pirates of Penzance. It has been called the most famous Gilbert and Sullivan patter song. Sung by Major-General Stanley at his first entrance, towards the end of Act I, the character introduces himself by presenting his résumé as a polymath but admitting to fundamental shortcomings. He claims a wide range of classical, historical and scientific knowledge but admits that he knows little of military tactics, weapons or jargon. The song thereby satirises the idea of the "modern" educated British Army officer of the latter 19th century.`
-    const img = "https://upload.wikimedia.org/wikipedia/commons/d/dd/LyttonMajorGeneral.gif";
+    const blurb = [`The Streisand effect describes a situation where an attempt to hide, remove, or censor information results in the unintended consequence of the effort instead increasing public awareness of the information.`, `The term was coined in 2005 by Mike Masnick of Techdirt after Barbra Streisand attempted to suppress the publication of a photograph by Kenneth Adelman showing her clifftop residence in Malibu, taken to document coastal erosion in California.`];
+    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Streisand_Estate.jpg/1280px-Streisand_Estate.jpg";
 
     return {
         article,
