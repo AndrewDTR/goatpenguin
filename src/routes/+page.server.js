@@ -7,7 +7,7 @@ export async function load({ url }) {
 
     const article = "Oyez";
     const friendly = "Oyez";
-    const acceptedGuesses = ["oyez", "ohyez", "hear ye", "here ye", "hear ye!", "ohyay"];
+    const acceptedGuesses = ["oyez", "ohyez", "hear ye", "here ye", "hear ye!", "ohyay", "hear ye hear ye", "hear ye hear ye hear ye"];
     const day = "day63";
     const dayNum = 63;
 
