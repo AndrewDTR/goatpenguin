@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Streisand_effect";
-    const friendly = "Streisand effect";
-    const acceptedGuesses = ["streisand effect", "streishand effect", "strisehand effect", "striseand effect"];
-    const day = "day62";
-    const dayNum = 62;
+    const article = "Oyez";
+    const friendly = "Oyez";
+    const acceptedGuesses = ["oyez", "ohyez", "hear ye", "here ye", "hear ye!", "ohyay"];
+    const day = "day63";
+    const dayNum = 63;
 
-    const categories = ["2005 neologisms",
-        "Malibu, California",
-        "Eponyms",
-        "Privacy controversies",
-        "Internet censorship in the United States",
+    const categories = ["British traditions",
+        "18th century neologisms",
+        "Court administration",
+        "Town criers",
+        "Supreme Court of the United States",
     ]
 
-    const blurb = [`The Streisand effect describes a situation where an attempt to hide, remove, or censor information results in the unintended consequence of the effort instead increasing public awareness of the information.`, `The term was coined in 2005 by Mike Masnick of Techdirt after Barbra Streisand attempted to suppress the publication of a photograph by Kenneth Adelman showing her clifftop residence in Malibu, taken to document coastal erosion in California.`];
-    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Streisand_Estate.jpg/1280px-Streisand_Estate.jpg";
+    const blurb = [`Oyez (synonym: "hear ye") is a traditional interjection said two or three times in succession to introduce the opening of a court of law. The interjection was also traditionally used by town criers to attract the attention of the public to public proclamations.`, `The term is still in use by the Supreme Court of the United States. At the beginning of each session, the Marshal of the United States Supreme Court strikes a gavel and announces: "The Honorable, the Chief Justice and the Associate Justices of the Supreme Court of the United States. Oyez! Oyez! Oyez! All persons having business before the Honorable, the Supreme Court of the United States, are admonished to draw near and give their attention, for the Court is now sitting. God save the United States and this Honorable Court."`]
+    const img = "https://upload.wikimedia.org/wikipedia/commons/c/ce/Have_bell_will_travel._Peter_Moore%2C_Town_Crier_to_the_Mayor_of_London_and_the_Greater_London_Authority_%E2%80%A6_promotions%2C_parades%2C_openings_etc._%281388747790%29.jpg";
 
     return {
         article,
