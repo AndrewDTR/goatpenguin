@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Trolley_problem";
-    const friendly = "Trolley problem";
-    const acceptedGuesses = ["trolley problem", "the trolley problem"];
-    const day = "day64";
-    const dayNum = 64;
+    const article = "Lorem_ipsum";
+    const friendly = "Lorem ipsum";
+    const acceptedGuesses = ["lorem ipsum", "lorem ispum", "lorum ipsum", "lorum ispum"];
+    const day = "day65";
+    const dayNum = 65;
 
-    const categories = ["1967 introductions",
-        "Moral psychology",
-        "Philosophical problems",
-        "Thought experiments in ethics",
-        "Dilemmas",
+    const categories = ["1960s neologisms",
+        "Cicero",
+        "Latin words and phrases",
+        "Nonsense",
+        "Filler text",
     ]
 
-    const blurb = `The trolley problem is a series of thought experiments in ethics, psychology and artificial intelligence involving stylized ethical dilemmas in a scenario of whether to sacrifice one person to save a larger number. The series usually begins with a scenario in which a runaway trolley (tram) or train is on course to collide with and kill a number of people (traditionally five) down the railway track, but a driver or bystander can intervene and divert the vehicle to kill just one person on a different track. Then other variations of the runaway vehicle, and analogous life-and-death dilemmas (medical, judicial, etc.) are posed, each containing the option either to do nothing—in which case several people will be killed—or to intervene and sacrifice one initially "safe" person to save the others.`;
-    const img = "a.png";
+    const blurb = `Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. It is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin. The first two words are the truncation of dolorem ipsum ("pain itself"). Lorem ipsum's purpose is to permit a page layout to be designed, independently of the copy that will subsequently populate it, or to demonstrate various fonts of a typeface without meaningful text that could be distracting.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/4/42/Letraset_Lorem_Ipsum.jpg";
 
     return {
         article,
