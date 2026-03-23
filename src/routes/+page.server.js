@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Dyson_(company)";
-    const friendly = "Dyson (company)";
-    const acceptedGuesses = ["dyson"];
-    const day = "day67";
-    const dayNum = 67;
+    const article = "Blåhaj";
+    const friendly = "Blåhaj";
+    const acceptedGuesses = ["blåhaj", "blahaj", "ikea shark", "blue shark"];
+    const day = "day68";
+    const dayNum = 68;
 
-    const categories = ["Companies of Singapore",
-        "Electronics companies established in 1993",
-        "Companies named after their founders",
-        "Engineering companies of the United Kingdom",
-        "Vacuum cleaner manufacturers",
+    const categories = ["Internet memes introduced in 2018",
+        "Stuffed toys",
+        "LGBTQ symbols",
+        "IKEA products",
+        "Fictional sharks",
     ]
 
-    const blurb = `Dyson Limited, d.b.a Dyson, is a Singaporean–British multinational technology company. Founded in 1991 by James Dyson in Malmesbury, Wiltshire, England, the company designs and manufactures household appliances such as vacuum cleaners, air purifiers, hand dryers, bladeless fans, heaters, hair dryers, and lights. As of 2022 Dyson has more than 14,000 employees worldwide. In 2019, Dyson moved its headquarters from the United Kingdom to Singapore to be closer to its manufacturing and supply-chain hubs and Asian customer base.`;
-    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Dyson_Demo_Store%2C_London.jpg/1280px-Dyson_Demo_Store%2C_London.jpg";
+    const blurb = `Blåhaj (lit. 'blue shark', sometimes called "IKEA shark") is a plush toy manufactured and sold by the Swedish company IKEA. Modeled after the blue shark and made of recycled polyester, the toy has become a globally popular internet meme since the late 2010s. For example, it has become a cultural icon in countries like Russia and China, played a symbolic role in Switzerland's same-sex marriage referendum, and found special significance within the transgender community. It has also been used as a mascot by IKEA in some regions.`
+    const img = "https://upload.wikimedia.org/wikipedia/en/b/b3/IKEA_Bl%C3%A5haj_plush_shark_toys_-_regular_and_small_variants_-_side_and_bottom_views.png";
 
     return {
         article,
