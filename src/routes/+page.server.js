@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Blåhaj";
-    const friendly = "Blåhaj";
-    const acceptedGuesses = ["blåhaj", "blahaj", "ikea shark", "blue shark"];
-    const day = "day68";
-    const dayNum = 68;
+    const article = "Snow_leopard";
+    const friendly = "Snow leopard";
+    const acceptedGuesses = ["snow leopard", "snep"];
+    const day = "day69";
+    const dayNum = 69;
 
-    const categories = ["Internet memes introduced in 2018",
-        "Stuffed toys",
-        "LGBTQ symbols",
-        "IKEA products",
-        "Fictional sharks",
+    const categories = ["National symbols of Pakistan",
+        "Fauna of the Himalayas",
+        "Vulnerable animals",
+        "Felids of Asia",
+        "Big cats",
     ]
 
-    const blurb = `Blåhaj (lit. 'blue shark', sometimes called "IKEA shark") is a plush toy manufactured and sold by the Swedish company IKEA. Modeled after the blue shark and made of recycled polyester, the toy has become a globally popular internet meme since the late 2010s. For example, it has become a cultural icon in countries like Russia and China, played a symbolic role in Switzerland's same-sex marriage referendum, and found special significance within the transgender community. It has also been used as a mascot by IKEA in some regions.`
-    const img = "https://upload.wikimedia.org/wikipedia/en/b/b3/IKEA_Bl%C3%A5haj_plush_shark_toys_-_regular_and_small_variants_-_side_and_bottom_views.png";
+    const blurb = `The snow leopard (Panthera uncia) is a species of large cat in the genus Panthera of the family Felidae. It is native to the mountain ranges of Central and South Asia, ranging from eastern Afghanistan, the Himalayas and the Tibetan Plateau to southern Siberia, Mongolia and Western China. It inhabits alpine and subalpine zones at elevations of 3,000–4,500 m (9,800–14,800 ft), but also lives at lower elevations in the northern part of its range.`
+    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Irbis4.JPG/1280px-Irbis4.JPG";
 
     return {
         article,
