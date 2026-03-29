@@ -1,0 +1,29 @@
+import { error } from '@sveltejs/kit';
+
+export async function load({ fetch }) {
+	const dayString = new Intl.DateTimeFormat('sv-SE', {
+		timeZone: 'America/Chicago'
+	}).format(new Date());
+
+	const gameRes = await fetch(`/game?day=${dayString}`);
+	const game = await gameRes.json();
+
+	if (gameRes.status == 404) {
+		error(404, {
+			message: "Can't find today's goatpenguin..."
+		});
+	}
+
+	const { article, friendly, acceptedGuesses, day, dayNum, categories, blurb, img } = game;
+
+	return {
+		article,
+		friendly,
+		categories,
+		day,
+		dayNum,
+		acceptedGuesses,
+		blurb,
+		img
+	};
+}

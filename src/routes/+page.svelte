@@ -109,6 +109,10 @@
 			return win();
 		}
 
+		if (stringSimilarity(answer.toLowerCase(), friendly.toLowerCase()) >= 0.7) {
+			return win();
+		}
+
 		if (revealed > 5) {
 			if (typeof window !== 'undefined' && window.rybbit) {
 				window.rybbit.event(`gp_loss${dayNum}`);
@@ -279,7 +283,7 @@
 			<div class="mt-1">
 				{#if img !== null}
 					<img
-						class="my-2 h-40 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
+						class="my-2 h-64 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
 						src={img}
 						alt={`${friendly} Wikipedia article image`}
 					/>
