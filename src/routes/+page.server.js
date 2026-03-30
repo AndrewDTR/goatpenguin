@@ -5,21 +5,21 @@ export async function load({ url }) {
         redirect(308, 'https://goatpenguin.com');
     }
 
-    const article = "Snow_leopard";
-    const friendly = "Snow leopard";
-    const acceptedGuesses = ["snow leopard", "snep"];
-    const day = "day69";
-    const dayNum = 69;
+    const article = "Sundial";
+    const friendly = "Sundial";
+    const acceptedGuesses = ["sundial", "sun dial"];
+    const day = "day70";
+    const dayNum = 70;
 
-    const categories = ["National symbols of Pakistan",
-        "Fauna of the Himalayas",
-        "Vulnerable animals",
-        "Felids of Asia",
-        "Big cats",
+    const categories = ["Outdoor sculptures",
+        "Egyptian inventions",
+        "Garden ornaments",
+        "Horology",
+        "Clocks",
     ]
 
-    const blurb = `The snow leopard (Panthera uncia) is a species of large cat in the genus Panthera of the family Felidae. It is native to the mountain ranges of Central and South Asia, ranging from eastern Afghanistan, the Himalayas and the Tibetan Plateau to southern Siberia, Mongolia and Western China. It inhabits alpine and subalpine zones at elevations of 3,000–4,500 m (9,800–14,800 ft), but also lives at lower elevations in the northern part of its range.`
-    const img = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Irbis4.JPG/1280px-Irbis4.JPG";
+    const blurb = `A sundial is a horological device that tells the time of day (referred to as civil time in modern usage) when direct sunlight shines by the apparent position of the Sun in the sky. In the narrowest sense of the word, it consists of a flat plate (the dial) and a gnomon, which casts a shadow onto the dial. As the Sun appears to move through the sky, the shadow aligns with different hour-lines, which are marked on the dial to indicate the time of day. The style is the time-telling edge of the gnomon, though a single point or nodus may be used. The gnomon casts a broad shadow; the shadow of the style shows the time. The gnomon may be a rod, wire, or elaborately decorated metal casting. The style must be parallel to the axis of the Earth's rotation for the sundial to be accurate throughout the year. The style's angle from horizontal is equal to the sundial's geographical latitude.`;
+    const img = "https://upload.wikimedia.org/wikipedia/commons/8/86/MootHallSundial.JPG";
 
     return {
         article,
