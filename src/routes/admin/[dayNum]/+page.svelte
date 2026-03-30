@@ -2,7 +2,8 @@
 	import { page } from '$app/state';
 
 	let { data } = $props();
-	let { id, day, acceptedGuesses, dayNum, article, friendly, categories, blurb, img } = $derived(data);
+	let { id, day, acceptedGuesses, dayNum, article, friendly, categories, blurb, img } =
+		$derived(data);
 
 	const bgClass: Record<number, string> = {
 		100: 'bg-indigo-100 border-indigo-200',
@@ -41,29 +42,42 @@
 
 		<form method="POST" action="?/update">
 			<div class="mt-4">
-				<p class="font-bold text-white">ID/Date</p>
+				<p class="font-bold text-white">ID/Date (YYYY-MM-DD)</p>
 
-				<input bind:value={id} class="w-full text-black" name="id" />
+				<input bind:value={id} class="w-full text-black" name="id" required />
 
 				<p class="font-bold text-white">Article</p>
 
-				<input bind:value={article} class="w-full text-black" name="article" />
+				<input bind:value={article} class="w-full text-black" name="article" required />
 
 				<p class="mt-2 font-bold text-white">Friendly</p>
 
-				<input bind:value={friendly} class="w-full text-black" name="friendly" />
+				<input bind:value={friendly} class="w-full text-black" name="friendly" required />
 
 				<p class="mt-2 font-bold text-white">Day (string)</p>
 
-				<input bind:value={dayMake} class="text-black" name="day" />
+				<input bind:value={dayMake} class="text-black" name="day" required />
 
 				<p class="mt-2 font-bold text-white">dayNum (number)</p>
 
-				<input bind:value={day} class="text-black" name="dayNum" type="number" />
+				<input bind:value={day} class="text-black" name="dayNum" type="number" required />
 
 				<p class="mt-2 font-bold text-white">Blurb</p>
 
-				<textarea bind:value={blurb} class="h-48 w-full text-black" name="blurb"></textarea>
+				<textarea bind:value={blurb} class="h-48 w-full text-black" name="blurb" required
+				></textarea>
+
+				<p class="mt-2 font-bold text-white">Accepted Guesses (JSON list for now)</p>
+
+				<input bind:value={friendly} class="w-full text-black" name="acceptedGuesses" required />
+
+				<p class="mt-2 font-bold text-white">Image link</p>
+
+				<input bind:value={friendly} class="w-full text-black" name="img" required />
+
+				<p class="mt-2 font-bold text-white">Image size</p>
+
+				<input bind:value={friendly} class=" text-black" name="imgSize" required />
 
 				<p class="mt-2 font-bold text-white">Clues</p>
 
@@ -81,8 +95,6 @@
 						</div>
 					{/each}
 				</div>
-
-				
 			</div>
 			<button
 				class="active:border-purple:800 mt-2 h-12 w-32 cursor-pointer border border-purple-700 bg-purple-900 text-white hover:border-purple-800 hover:bg-purple-950 active:bg-purple-600"

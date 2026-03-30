@@ -37,7 +37,7 @@
 					<tr class="border border-[#796bfc5f]">
 						<td class="p-1 py-2">{game.id}</td>
 						<td>{game.dayNum}</td>
-						<td>{game.article}</td>
+						<td>{game.friendly}</td>
 						<td>
 							<a href={`/admin/${game.dayNum}`}>
 								<button class="cursor-pointer bg-blue-500 p-2 hover:bg-blue-600">Edit</button>

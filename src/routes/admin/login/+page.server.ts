@@ -22,7 +22,6 @@ export const actions: Actions = {
 	default: async ({ request, cookies, url }) => {
 		const data = await request.formData();
 		const pw = String(data.get('password') ?? '');
-		const next = url.searchParams.get('next') || '/admin';
 
 		if (!env.ADMIN_PASS || !secureCompare(pw, env.ADMIN_PASS)) {
 			return fail(400, { error: 'Incorrect password' });
@@ -36,6 +35,6 @@ export const actions: Actions = {
 			maxAge: 60 * 60 * 8
 		});
 
-		redirect(303, next);
+		redirect(303, '/admin');
 	}
 };
