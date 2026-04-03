@@ -4,216 +4,8 @@
 	import { stringSimilarity } from 'string-similarity-js';
 	import { Confetti } from 'svelte-confetti';
 
-	const day = 'fakeGP';
-	const friendly = "April Fools' Day";
-	const article = 'April_Fools%27_Day';
-	const blurb = `April Fools' Day or April Fool's Day (rarely called All Fools' Day) is an annual custom in many Western countries on the 1st of April consisting of practical jokes, hoaxes, and pranks. Jokesters often expose their actions by shouting "April Fool[s]!" at the recipient. Mass media can be involved with these pranks, which may be revealed as such the following day. The custom of setting aside a day for playing harmless pranks upon one's neighbor has been relatively common in the world historically.`;
-	const img = `https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg`;
-
-	const acceptedGuesses = ['april 1st', 'april fools day', 'april fools', 'april fools day'];
-
-	const categories = [
-		'Ed Sheeran songs',
-		'Maritime incidents in August 1862',
-		'1582 in politics',
-		'People from Columbiana, Alabama',
-		'Magical girl video games',
-		'Organizations based in Yokohama',
-		'Light Records albums',
-		'Llandovery',
-		'2014\u201315 Scottish Professional Football League',
-		'Bowling at the SEA Games',
-		'Cantopop video albums',
-		'Paragon Programming games',
-		'Archaeological sites in Garrett County, Maryland',
-		'Films directed by \u00c9rik Canuel',
-		'Law enforcement stubs',
-		'Christian denominations in Malawi',
-		'Music of Vanuatu',
-		'UT Tyler Patriots',
-		'Suspected Wikipedia sockpuppets of vezaso',
-		'Antena Interna\u021bional',
-		'Verve Music Group',
-		'Footballers from Navarre',
-		'People acquitted of fraud',
-		'Choral compositions',
-		'Peerless Records artists',
-		'Tommy Hilfiger (company)',
-		'1841 in United States case law',
-		'Molluscs described in 1945',
-		'Translators of Mario Vargas Llosa',
-		'Plateaus of Egypt',
-		'December 1990 sports events in the United Kingdom',
-		'Actors from Galicia (Spain)',
-		'Novels by Kobo Abe',
-		'Australian bioinformaticians',
-		'Dance in China',
-		'Unknown-importance Oceania road transport articles',
-		'Taxa named by August Thienemann',
-		'User en-simple-4',
-		'Reserve team football in Poland',
-		'Politics of Flevoland',
-		'Burials at Ivry Cemetery',
-		'Unincorporated communities in Cedar County, Nebraska',
-		'Protected areas of York County, Virginia',
-		'Basketball players from Warsaw',
-		'Ambassadors of Finland to South Korea',
-		'April 2002 in Australia',
-		'Disambig-Class Historic sites pages',
-		'Holland High School (Michigan) alumni',
-		'Literary museums in Jamaica',
-		'Kalasha Valleys',
-		'United States Virgin Islands marathon runners',
-		'Treaties extended to Vanuatu',
-		'2013 in Lithuania',
-		'People from La Madeleine, Nord',
-		'Nordic combined skiers at the 1968 Winter Olympics',
-		'Former electoral divisions of Tasmania',
-		'Maldivian crime films',
-		'Wikipedia articles with plot summary needing attention from June 2010',
-		'Youth in Puerto Rico',
-		'Serbian Democratic Party (Bosnia and Herzegovina) politicians',
-		'Sports venues completed in 1971',
-		'Equatoguinean basketball players',
-		'File-Class Eclipses pages',
-		'People from Falkenberg/Elster',
-		'Church of Sweden',
-		'November 1904',
-		'Premier League matches',
-		"2018 in women's road cycling",
-		'Environmental organisations by year of establishment',
-		'Caves of Latvia',
-		'Azerbaijani expatriate sportspeople in Finland',
-		'Songs written by Fraser T. Smith',
-		'Spanish satirists',
-		'1951 in Germany',
-		'Tourism in Kiribati',
-		'Years of the 16th century in the Polish\u2013Lithuanian Commonwealth',
-		'The Country Gentlemen',
-		'British Columbia provincial electoral districts on Vancouver Island',
-		'Wikipedia sockpuppets of Blayttlyjg',
-		"1987\u201388 Mid-Eastern Athletic Conference men's basketball season",
-		'Anglo-Catholic churches in Leicestershire',
-		'1967 in Colombian sport',
-		'English knights by type or order of chivalry',
-		'Bodies of water of Jefferson County, Alabama',
-		'Songs written by Rob Bolland',
-		'Online dating services of India',
-		'Electoral geography of the United States',
-		"Women's suffrage in Oregon",
-		'June 2013 sports events',
-		'FM-Class Saints articles',
-		'Togolese emigrants to Germany',
-		'Decades in Ghana',
-		'Gulf Coast Premier League players',
-		'People from Dakshin Dinajpur district',
-		'1996 establishments in Mongolia',
-		'Mathematical logic organisations',
-		'Canadian indie rock groups',
-		'National Register of Historic Places in Gibson County, Tennessee',
-		'1906 North Carolina elections',
-		'Sports drama films by language',
-		'Populated places in DeKalb County, Illinois',
-		'Danish royal consorts',
-		'Wikipedia sockpuppets of Colassww',
-		'Music videos directed by Charles Wittenmeier',
-		'Religious buildings and structures completed in the 1850s',
-		'1698 in the arts',
-		'Athletes (track and field) at the 1987 Pan American Games',
-		'Albums produced by Petit Biscuit',
-		'Unsolved murders in India',
-		'Sports venues in Malaysia by populated place',
-		'Slovak clergy',
-		'2019 Asian domestic association football cups',
-		'Latin Grammy Awards for traditional music',
-		'1295 establishments',
-		'Sockens in Sweden',
-		'No Secrets (musical group) albums',
-		'Christian denominations in Myanmar',
-		'International cricket competitions from 1888\u201389 to 1918',
-		'Articles containing Kukna-language text',
-		'1973 in Slovenia',
-		'FL-Class Indian music articles of Low-importance',
-		'Soccer competitions in the United States',
-		'Olympic tennis players for Belgium',
-		'Hyde United F.C. templates',
-		'2017 establishments in Oklahoma',
-		'Lists of 1976 films by country',
-		'Hospitals established in 2020',
-		'1788 sculptures',
-		'Dutch people of the American Revolution',
-		'Mayors of Fairfield, New South Wales',
-		'Bantu (band) albums',
-		'Populated places in the Islands Region',
-		'Members of Thames Valley Harriers',
-		'People from Bagratid Armenia',
-		'1876 in Irish sport',
-		'Jamaican women dramatists and playwrights',
-		'Swinford Gaelic footballers',
-		'Women art historians',
-		'Magazines established in 1912',
-		'Science and technology in Victoria (state)',
-		'2009 Moorilla Hobart International',
-		'July 2020 events in Ethiopia',
-		'Ambassadors of Lithuania to the Holy See',
-		'Libraries established in 1947',
-		'1082 in England',
-		'Disambig-Class Trinidad and Tobago pages',
-		'Canadian travel books',
-		'1711 in law',
-		'September 1882 events',
-		'Eastern Mountain Coal Fields task force participants',
-		'Private schools in Wiltshire',
-		"JDE Peet's",
-		'MTU Kerry Gaelic footballers',
-		'1992 plays',
-		'People from Kingfisher County, Oklahoma',
-		'1963 Mid-American Conference baseball season',
-		"1969-70 NCAA University Division men's basketball independents season",
-		'German male silent film actors',
-		'Government of South Korea',
-		'Lists of mass media in Ecuador',
-		'Art museums and galleries in Wiltshire',
-		'XFL user templates',
-		'Al Taawoun FC players',
-		'Anime and manga set in London',
-		'Sunny Day Real Estate members',
-		'Actors from Hot Spring County, Arkansas',
-		'Musical groups established in 1845',
-		'International sports by period',
-		'Estonian women guitarists',
-		'Use Hong Kong English from July 2024',
-		'Suspected Wikipedia sockpuppets of Seulgi-wonyoung',
-		'2002 live albums',
-		'Taxa named by \u00c9mile Oustalet',
-		'Tribe of Issachar',
-		'1692 establishments in North America',
-		'Religion in Djibouti',
-		'July 1926 sports events in North America',
-		'Italian male golfers',
-		'December 2014 in Germany',
-		'Venezuelan chess players',
-		'Chicago Express players',
-		'Philippine companies established in 2008',
-		'Women in the French Wars of Religion',
-		'Schools in the Borough of North East Lincolnshire',
-		'Caves of Timor-Leste',
-		'Politicians from Eastern Region (Ghana)',
-		'Films directed by Umetsugu Inoue',
-		'1835 establishments in the Spanish Empire',
-		'Cricket in the Americas',
-		"Ashland Eagles men's soccer",
-		'1st-century deaths',
-		"2022\u201323 West Coast Conference men's basketball season",
-		'Godzilla television series',
-		'Women in Pahang',
-		'1948 establishments in Israel',
-		'Sport in Uzhhorod',
-		'Articles containing French-language text',
-		'Taiwanese people of English descent',
-		'Oklahoma Panhandle State Aggies athletic directors',
-		'1988 Japanese television seasons'
-	];
+	let { data } = $props();
+	let { day, acceptedGuesses, dayNum, article, friendly, categories, blurb, img } = $derived(data);
 
 	type Game = {
 		revealed: number;
@@ -230,8 +22,7 @@
 		600: 'bg-indigo-600 border-indigo-700',
 		700: 'bg-indigo-700 border-indigo-800',
 		800: 'bg-indigo-800 border-indigo-900',
-		900: 'bg-indigo-900 border-indigo-950',
-		1000: 'bg-indigo-950 border-gray-700'
+		900: 'bg-indigo-900 border-indigo-950'
 	};
 
 	let revealed = $state(1);
@@ -250,20 +41,55 @@
 			revealed = Number(currDay.revealed);
 			gameState = currDay.gameState;
 			guesses = currDay.guesses;
+
+			if (gameState === 'win') {
+				streak = checkStreak();
+			}
 		}
 	}
 
+	function checkStreak() {
+		for (let i = dayNum; i > 0; i--) {
+			const dayKey = `day${i}`;
+			const streak = dayNum - i;
+
+			const dayResult = localStorage.getItem(dayKey);
+
+			if (dayResult === null) {
+				return streak;
+			}
+
+			const dayGameState = JSON.parse(dayResult).gameState;
+
+			if (dayGameState !== 'win') {
+				return streak;
+			}
+		}
+
+		return dayNum;
+	}
+
 	function win() {
+		if (typeof window !== 'undefined' && window.rybbit) {
+			window.rybbit.event(`gp_win${dayNum}`);
+		}
+
 		gameState = 'win';
 
 		if (browser) {
 			localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
 		}
 
+		streak = checkStreak();
+
 		return;
 	}
 
 	function handleAnswer(e: SubmitEvent) {
+		if (typeof window !== 'undefined' && window.rybbit) {
+			window.rybbit.event(`gp_update${dayNum}`);
+		}
+
 		e.preventDefault();
 
 		guesses.push(answer);
@@ -273,27 +99,50 @@
 			localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
 		}
 
-		const normalizedAnswer = answer.replaceAll("'", '').replaceAll("'", '').toLowerCase().trim();
-
-		if (acceptedGuesses.includes(normalizedAnswer)) {
+		if (acceptedGuesses.includes(answer.replaceAll("'", '').toLowerCase())) {
 			return win();
 		}
 
-		if (acceptedGuesses.some((a) => stringSimilarity(a.toLowerCase(), normalizedAnswer) >= 0.7)) {
+		if (
+			acceptedGuesses.some((a) => stringSimilarity(a.toLowerCase(), answer.toLowerCase()) >= 0.7)
+		) {
 			return win();
 		}
 
-		if (revealed > 20) {
-			return win();
+		if (revealed > 5) {
+			if (typeof window !== 'undefined' && window.rybbit) {
+				window.rybbit.event(`gp_loss${dayNum}`);
+			}
+
+			gameState = 'loss';
+			if (browser) {
+				localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
+			}
 		}
 
 		answer = '';
 	}
 
 	async function copy() {
-		let text = `goatpenguin? ${revealed - 1}/??? \n${page.url.origin}\n\n`;
+		let text = `goatpenguin #${dayNum} ${gameState == 'win' ? revealed - 1 : 'X'}/5 \n${page.url.origin}\n\n`;
 
-		text += '🐐🐧🐐🐧🐐🐧 🎉 🐐🐧🐐🐧🐐🐧';
+		for (let i = 1; i < 6; i++) {
+			if (revealed > i) {
+				if (gameState === 'win') {
+					text += '🐐\n';
+				} else {
+					text += '🐧\n';
+				}
+			}
+		}
+
+		if (gameState == 'win') {
+			text += '✅';
+		}
+
+		if (gameState == 'loss') {
+			text += '❌';
+		}
 
 		await navigator.clipboard.writeText(text);
 		copied = true;
@@ -339,14 +188,12 @@
 
 		{#if gameState === 'guessing'}
 			<div class="mt-4">
-				{#each categories as category, idx (idx)}
-					{#if revealed <= 5 ? idx < 5 : idx < revealed + 1}
-						<div
-							class={`${idx == revealed - 1 ? 'font-bold' : ''} flex h-12 w-full items-center justify-center border text-white italic ${idx < 5 ? bgClass[500 + idx * 100] : bgClass[1000]}`}
-						>
-							{idx <= revealed - 1 ? category : '???'}
-						</div>
-					{/if}
+				{#each categories as category, idx (category)}
+					<div
+						class={`${idx == revealed - 1 ? 'font-bold' : ''} flex h-12 w-full items-center justify-center border border-indigo-500 text-white italic ${bgClass[500 + idx * 100]}`}
+					>
+						{idx <= revealed - 1 ? category : '???'}
+					</div>
 				{/each}
 			</div>
 
@@ -370,20 +217,40 @@
 					</div>
 				{/each}
 			</div>
-		{:else if gameState === 'win'}
-			<div class="relative mt-4">
-				<div class="absolute top-0 left-1/2">
-					<Confetti />
-				</div>
+		{:else if gameState === 'win' || gameState === 'loss'}
+			{#if gameState === 'win'}
+				<div class="relative mt-4">
+					<div class="absolute top-0 left-1/2">
+						<Confetti />
+					</div>
 
-				<div
-					class="relative z-0 flex w-full items-center justify-center border border-pink-500 bg-pink-800"
-				>
-					<div class="m-2 flex flex-col text-center">
-						<p class="text-xl font-bold text-white">🐐 Happy April Fools' Day! 🐧</p>
+					<div
+						class="relative z-0 flex w-full items-center justify-center border border-green-500 bg-green-800"
+					>
+						<div class="m-2 flex flex-col text-center">
+							<p class="text-xl font-bold text-white">🐐 You go(a)t it!</p>
+							{#if streak > 0}
+								<p class="text-white">
+									Current streak: {streak} day{streak == 1 ? '' : 's'}
+								</p>
+							{/if}
+						</div>
 					</div>
 				</div>
-			</div>
+			{:else if gameState === 'loss'}
+				<div
+					class="relative z-0 mt-4 flex w-full items-center justify-center border border-red-500 bg-red-800"
+				>
+					<div class="m-2 flex flex-col text-center">
+						<p class="text-xl font-bold text-white">🐧 Not today...</p>
+						{#if streak > 0}
+							<p class="text-white">
+								Current streak: {streak} day{streak == 1 ? '' : 's'}
+							</p>
+						{/if}
+					</div>
+				</div>
+			{/if}
 
 			<div class="mt-2">
 				<a
@@ -412,7 +279,7 @@
 			<div class="mt-1">
 				{#if img !== null}
 					<img
-						class="my-2 h-72 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
+						class="my-2 h-64 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
 						src={img}
 						alt={`${friendly} Wikipedia article image`}
 					/>
@@ -425,7 +292,7 @@
 					{/each}
 				{/if}
 				<p class="mt-1 text-sm text-gray-400 italic">
-					Article description and categories from Wikipedia.org.
+					{`Article description${img ? ', categories, and image ' : ' and categories'} from Wikipedia.org.`}
 				</p>
 			</div>
 			<button
@@ -437,9 +304,9 @@
 			<details class="mt-2 text-white">
 				<summary class="text-gray-400 underline">View hints and guesses</summary>
 				<div class="mt-2">
-					{#each categories.slice(0, revealed - 1) as category, idx (idx)}
+					{#each categories as category, idx (category)}
 						<div
-							class={`flex h-12 w-full items-center justify-center border text-white italic ${idx < 5 ? bgClass[500 + idx * 100] : bgClass[1000]} border-dashed`}
+							class={`flex h-12 w-full items-center justify-center border border-indigo-500 text-white italic ${bgClass[500 + idx * 100]} border-dashed`}
 						>
 							{category}
 						</div>
@@ -447,12 +314,12 @@
 				</div>
 
 				<div class="mt-2">
-					{#each guesses.slice(0, guesses.length - 1) as guess, idx (idx)}
+					{#each gameState === 'win' ? guesses.slice(0, guesses.length - 1) : guesses as guess, idx (idx)}
 						<div class="flex border-2 border-dashed border-white">
 							<p class="p-2 text-lg text-white">❌ {guess}</p>
 						</div>
 					{/each}
-					{#if guesses.length > 0}
+					{#if gameState === 'win'}
 						<div class="flex border-2 border-dashed border-white">
 							<p class="p-2 text-lg text-white">✅ {guesses[guesses.length - 1]}</p>
 						</div>
