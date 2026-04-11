@@ -14,7 +14,7 @@ export async function load({ fetch }) {
 		});
 	}
 
-	const { article, friendly, acceptedGuesses, day, dayNum, categories, blurb, img } = game;
+	const { article, friendly, acceptedGuesses, day, dayNum, categories, blurb, img, imgSize } = game;
 
 	return {
 		article,
@@ -24,6 +24,7 @@ export async function load({ fetch }) {
 		dayNum,
 		acceptedGuesses,
 		blurb,
-		img
+		img,
+		imgSize
 	};
 }

@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { page } from '$app/state';
-
 	let { data } = $props();
-	let { id, day, acceptedGuesses, dayNum, article, friendly, categories, blurb, img } =
+	let { id, day, acceptedGuesses, dayNum, article, friendly, categories, blurb, img, imgSize } =
 		$derived(data);
 
 	const bgClass: Record<number, string> = {
@@ -17,7 +15,7 @@
 		900: 'bg-indigo-900 border-indigo-950'
 	};
 
-	let dayMake = $derived(`day${day ?? page.params.dayNum}`);
+	let dayMake = $derived(`day${dayNum}`);
 </script>
 
 <div class="flex min-h-screen w-full flex-wrap justify-center">
@@ -60,7 +58,7 @@
 
 				<p class="mt-2 font-bold text-white">dayNum (number)</p>
 
-				<input bind:value={day} class="text-black" name="dayNum" type="number" required />
+				<input bind:value={dayNum} class="text-black" name="dayNum" type="number" required />
 
 				<p class="mt-2 font-bold text-white">Blurb</p>
 
@@ -69,15 +67,15 @@
 
 				<p class="mt-2 font-bold text-white">Accepted Guesses (JSON list for now)</p>
 
-				<input bind:value={friendly} class="w-full text-black" name="acceptedGuesses" required />
+				<input bind:value={acceptedGuesses} class="w-full text-black" name="acceptedGuesses" required />
 
 				<p class="mt-2 font-bold text-white">Image link</p>
 
-				<input bind:value={friendly} class="w-full text-black" name="img" required />
+				<input bind:value={img} class="w-full text-black" name="img" required />
 
 				<p class="mt-2 font-bold text-white">Image size</p>
 
-				<input bind:value={friendly} class=" text-black" name="imgSize" required />
+				<input bind:value={imgSize} class=" text-black" name="imgSize" required />
 
 				<p class="mt-2 font-bold text-white">Clues</p>
 

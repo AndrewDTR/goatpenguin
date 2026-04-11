@@ -5,7 +5,8 @@
 	import { Confetti } from 'svelte-confetti';
 
 	let { data } = $props();
-	let { day, acceptedGuesses, dayNum, article, friendly, categories, blurb, img } = $derived(data);
+	let { day, acceptedGuesses, dayNum, article, friendly, categories, blurb, img, imgSize } =
+		$derived(data);
 
 	type Game = {
 		revealed: number;
@@ -283,18 +284,14 @@
 			<div class="mt-1">
 				{#if img !== null}
 					<img
-						class="my-2 h-64 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
+						class="my-2 w-auto border border-white p-2 sm:float-none md:float-right md:m-2"
 						src={img}
 						alt={`${friendly} Wikipedia article image`}
+						style={`height: ${imgSize * 0.25}rem;`}
 					/>
 				{/if}
-				{#if typeof blurb === 'string'}
-					<p class="text-white">{blurb}</p>
-				{:else if Array.isArray(blurb)}
-					{#each blurb as paragraph (paragraph)}
-						<p class="mb-4 text-white">{paragraph}</p>
-					{/each}
-				{/if}
+				<p class="whitespace-pre-wrap text-white">{blurb}</p>
+
 				<p class="mt-1 text-sm text-gray-400 italic">
 					{`Article description${img ? ', categories, and image ' : ' and categories'} from Wikipedia.org.`}
 				</p>

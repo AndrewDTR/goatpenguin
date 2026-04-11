@@ -31,7 +31,7 @@ export const GET: RequestHandler = async ({ url }) => {
 		});
 	}
 
-	const { article, friendly, acceptedGuesses, day, dayNum, categories, blurb, img } = result;
+	const { article, friendly, acceptedGuesses, day, dayNum, categories, blurb, img, imgSize } = result;
 	return json({
 		article,
 		friendly,
@@ -40,6 +40,7 @@ export const GET: RequestHandler = async ({ url }) => {
 		dayNum,
 		acceptedGuesses: JSON.parse(acceptedGuesses),
 		blurb,
-		img
+		img,
+		imgSize
 	});
 };
