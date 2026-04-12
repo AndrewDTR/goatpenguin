@@ -1,7 +1,7 @@
 import Database from 'better-sqlite3';
 
-const db = new Database('/app/data/gp.db');
-db.pragma('journal_mode = WAL');
+const dbPath = process.env.DATABASE_PATH || 'gp.db';
+const db = new Database(dbPath);
 
 db.exec(`CREATE TABLE IF NOT EXISTS games
 (
