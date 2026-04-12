@@ -1,6 +1,6 @@
 import Database from 'better-sqlite3';
 
-const db = new Database('gp.db');
+const db = new Database('/app/data/gp.db');
 db.pragma('journal_mode = WAL');
 
 db.exec(`CREATE TABLE IF NOT EXISTS games

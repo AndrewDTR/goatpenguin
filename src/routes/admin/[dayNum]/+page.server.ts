@@ -31,13 +31,15 @@ export const actions: Actions = {
 			`INSERT INTO games (id, article, friendly, categories, day, dayNum, acceptedGuesses, blurb, img, imgSize)
 			VALUES (@id, @article, @friendly, @categories, @day, @dayNum, @acceptedGuesses, @blurb, @img, @imgSize)
 			ON CONFLICT(dayNum) DO UPDATE SET
-				article = @article,
-				friendly = @friendly,
-				categories = @categories,
-				acceptedGuesses = @acceptedGuesses,
-				blurb = @blurb,
-				img = @img,
-				imgSize = @imgSize`
+			id = @id,
+			article = @article,
+			friendly = @friendly,
+			categories = @categories,
+			day = @day,
+			acceptedGuesses = @acceptedGuesses,
+			blurb = @blurb,
+			img = @img,
+			imgSize = @imgSize`
 		);
 
 		statement.run({

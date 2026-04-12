@@ -67,7 +67,21 @@
 
 				<p class="mt-2 font-bold text-white">Accepted Guesses (JSON list for now)</p>
 
-				<input bind:value={acceptedGuesses} class="w-full text-black" name="acceptedGuesses" required />
+				<input
+					bind:value={acceptedGuesses}
+					class="w-full text-black"
+					name="acceptedGuesses"
+					required
+					oninvalid={(e) => e.target.setCustomValidity('Must be valid JSON')}
+					oninput={(e) => {
+						try {
+							JSON.parse(e.target.value);
+							e.target.setCustomValidity('');
+						} catch {
+							e.target.setCustomValidity('Must be valid JSON');
+						}
+					}}
+				/>
 
 				<p class="mt-2 font-bold text-white">Image link</p>
 
