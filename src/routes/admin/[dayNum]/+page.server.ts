@@ -25,63 +25,38 @@ export const load: PageServerLoad = async ({ params }) => {
 export const actions: Actions = {
 	update: async (event) => {
 		const form = await event.request.formData();
+		const dayNum = event.params.dayNum;
 
-		// does the current day exist
-		let statement = db.prepare('SELECT * FROM games WHERE id = ?');
-		let game = statement.get(form.get('id'));
+		const statement = db.prepare(
+			`INSERT INTO games (id, article, friendly, categories, day, dayNum, acceptedGuesses, blurb, img, imgSize)
+			VALUES (@id, @article, @friendly, @categories, @day, @dayNum, @acceptedGuesses, @blurb, @img, @imgSize)
+			ON CONFLICT(dayNum) DO UPDATE SET
+				article = @article,
+				friendly = @friendly,
+				categories = @categories,
+				acceptedGuesses = @acceptedGuesses,
+				blurb = @blurb,
+				img = @img,
+				imgSize = @imgSize`
+		);
 
-		// day doesn't exist
-		if (game === undefined) {
-			console.log("game doesn't exist");
-			statement = db.prepare(
-				'INSERT INTO games VALUES (@id, @article, @friendly, @categories, @day, @dayNum, @acceptedGuesses, @blurb, @img, @imgSize)'
-			);
-			statement.run({
-				id: form.get('id'),
-				article: form.get('article'),
-				friendly: form.get('friendly'),
-				categories: JSON.stringify([
-					form.get('0'),
-					form.get('1'),
-					form.get('2'),
-					form.get('3'),
-					form.get('4')
-				]),
-				day: form.get('day'),
-				dayNum: form.get('dayNum'),
-				acceptedGuesses: form.get('acceptedGuesses'),
-				blurb: form.get('blurb'),
-				img: form.get('img'),
-				imgSize: form.get('imgSize')
-			});
-		} else {
-			statement = db.prepare(
-				`UPDATE games SET
-					id = @id, article = @article, friendly = @friendly,
-					categories = @categories,
-					day = @day, dayNum = @dayNum,
-					acceptedGuesses = @acceptedGuesses,
-					blurb = @blurb, img = @img, imgSize = @imgSize
-				WHERE id = @id`
-			);
-			statement.run({
-				id: form.get('id'),
-				article: form.get('article'),
-				friendly: form.get('friendly'),
-				categories: JSON.stringify([
-					form.get('0'),
-					form.get('1'),
-					form.get('2'),
-					form.get('3'),
-					form.get('4')
-				]),
-				day: form.get('day'),
-				dayNum: Number(form.get('dayNum')),
-				acceptedGuesses: form.get('acceptedGuesses'),
-				blurb: form.get('blurb'),
-				img: form.get('img'),
-				imgSize: form.get('imgSize')
-			});
-		}
+		statement.run({
+			id: form.get('id'),
+			article: form.get('article'),
+			friendly: form.get('friendly'),
+			categories: JSON.stringify([
+				form.get('0'),
+				form.get('1'),
+				form.get('2'),
+				form.get('3'),
+				form.get('4')
+			]),
+			day: form.get('day'),
+			dayNum: dayNum,
+			acceptedGuesses: form.get('acceptedGuesses'),
+			blurb: form.get('blurb'),
+			img: form.get('img'),
+			imgSize: form.get('imgSize')
+		});
 	}
 };
