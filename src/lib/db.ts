@@ -2,6 +2,7 @@ import Database from 'better-sqlite3';
 
 const dbPath = process.env.DATABASE_PATH || 'gp.db';
 const db = new Database(dbPath);
+db.pragma('journal_mode = WAL');
 
 db.exec(`CREATE TABLE IF NOT EXISTS games
 (
