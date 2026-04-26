@@ -1,6 +1,22 @@
 <script lang="ts">
+	import { invalidateAll } from '$app/navigation';
+
 	let { data } = $props();
 	let { games } = $derived(data);
+
+	let confirm = $state(Array(games.length).fill(0));
+
+	async function handleDelete(dayNum: number, i: number) {
+		if (confirm[i] === 0) {
+			confirm[i] = 1;
+			return;
+		}
+		const res = await fetch(`/admin/delGame?game=${dayNum}`, { method: 'DELETE' });
+		if (res.ok) {
+			confirm = Array(games.length).fill(0);
+			await invalidateAll();
+		}
+	}
 </script>
 
 <div class="flex min-h-screen w-full flex-wrap justify-center">
@@ -30,10 +46,11 @@
 					<td class="p-2">Number</td>
 					<td class="p-2">Game</td>
 					<td class="p-2">Edit</td>
+					<td class="p-2">Delete</td>
 				</tr>
 			</thead>
 			<tbody>
-				{#each games as game (game.id)}
+				{#each games as game, i (game.id)}
 					<tr class="border border-[#796bfc5f]">
 						<td class="p-1 py-2">{game.id}</td>
 						<td>{game.dayNum}</td>
@@ -42,6 +59,16 @@
 							<a href={`/admin/${game.dayNum}`}>
 								<button class="cursor-pointer bg-blue-500 p-2 hover:bg-blue-600">Edit</button>
 							</a>
+						</td>
+						<td>
+							<button
+								class="cursor-pointer p-2 {confirm[i] === 1
+									? 'bg-red-700 hover:bg-red-800'
+									: 'bg-red-500 hover:bg-red-600'}"
+								onclick={() => handleDelete(game.dayNum, i)}
+							>
+								{confirm[i] === 1 ? 'Sure?' : 'Delete'}
+							</button>
 						</td>
 					</tr>
 				{/each}

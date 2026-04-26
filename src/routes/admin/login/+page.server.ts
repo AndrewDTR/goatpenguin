@@ -2,6 +2,7 @@ import type { Actions, PageServerLoad } from './$types';
 import { env } from '$env/dynamic/private';
 import { fail, redirect } from '@sveltejs/kit';
 import { timingSafeEqual } from 'crypto';
+import { adminToken, isAuthed } from '$lib/server/auth';
 
 function secureCompare(a: string, b: string): boolean {
 	if (a.length !== b.length) {
@@ -11,15 +12,13 @@ function secureCompare(a: string, b: string): boolean {
 }
 
 export const load: PageServerLoad = async ({ cookies }) => {
-	const authed = cookies.get('admin');
-
-	if (authed === '1') {
+	if (isAuthed(cookies.get('admin'))) {
 		redirect(303, '/admin');
 	}
 };
 
 export const actions: Actions = {
-	default: async ({ request, cookies, url }) => {
+	default: async ({ request, cookies }) => {
 		const data = await request.formData();
 		const pw = String(data.get('password') ?? '');
 
@@ -27,7 +26,12 @@ export const actions: Actions = {
 			return fail(400, { error: 'Incorrect password' });
 		}
 
-		cookies.set('admin', '1', {
+		const token = adminToken();
+		if (!token) {
+			return fail(500, { error: 'Server misconfigured' });
+		}
+
+		cookies.set('admin', token, {
 			httpOnly: true,
 			sameSite: 'lax',
 			secure: true,
