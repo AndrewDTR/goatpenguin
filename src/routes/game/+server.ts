@@ -10,6 +10,7 @@ type GameRow = {
 	categories: string;
 	blurb: string;
 	img: string;
+	imgSize: number;
 };
 
 export const GET: RequestHandler = async ({ url }) => {
@@ -27,7 +28,7 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	if (!result) {
 		error(404, {
-			message: "Can't find that day's goatpenguin"
+			message: "There doesn't exist a goatpenguin game for that day."
 		});
 	}
 
