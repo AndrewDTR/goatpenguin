@@ -39,7 +39,7 @@
 			</p>
 		</div>
 
-		<table class="mt-4 text-white w-full">
+		<table class="mt-4 w-full text-white">
 			<thead class="border border-indigo-800 bg-indigo-950">
 				<tr>
 					<td class="p-2">Date</td>
@@ -47,6 +47,7 @@
 					<td class="p-2">Game</td>
 					<td class="p-2">Edit</td>
 					<td class="p-2">Delete</td>
+					<td class="p-2">Play</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -69,6 +70,12 @@
 							>
 								{confirm[i] === 1 ? 'Sure?' : 'Delete'}
 							</button>
+							
+						</td>
+						<td>
+							<a href={`/play/?day=${game.id}`}>
+								<button class="cursor-pointer bg-blue-500 p-2 hover:bg-blue-600">Play</button>
+							</a>
 						</td>
 					</tr>
 				{/each}
