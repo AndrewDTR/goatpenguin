@@ -33,64 +33,12 @@
 	let copied = $state(false);
 	let streak = $state(0);
 
-	if (browser) {
-		const dayJSON = localStorage.getItem(day);
-
-		if (dayJSON != null) {
-			const currDay: Game = JSON.parse(dayJSON);
-
-			revealed = Number(currDay.revealed);
-			gameState = currDay.gameState;
-			guesses = currDay.guesses;
-
-			if (gameState === 'win') {
-				streak = checkStreak();
-			}
-		}
-	}
-
-	function checkStreak() {
-		for (let i = dayNum; i > 0; i--) {
-			const dayKey = `day${i}`;
-			const streak = dayNum - i;
-
-			const dayResult = localStorage.getItem(dayKey);
-
-			if (dayResult === null) {
-				return streak;
-			}
-
-			const dayGameState = JSON.parse(dayResult).gameState;
-
-			if (dayGameState !== 'win') {
-				return streak;
-			}
-		}
-
-		return dayNum;
-	}
-
 	function win() {
-		if (typeof window !== 'undefined' && window.rybbit) {
-			window.rybbit.event(`gp_win${dayNum}`);
-		}
-
 		gameState = 'win';
-
-		if (browser) {
-			localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
-		}
-
-		streak = checkStreak();
-
 		return;
 	}
 
 	function handleAnswer(e: SubmitEvent) {
-		if (typeof window !== 'undefined' && window.rybbit) {
-			window.rybbit.event(`gp_update${dayNum}`);
-		}
-
 		e.preventDefault();
 
 		guesses.push(answer);
@@ -115,14 +63,7 @@
 		}
 
 		if (revealed > 5) {
-			if (typeof window !== 'undefined' && window.rybbit) {
-				window.rybbit.event(`gp_loss${dayNum}`);
-			}
-
 			gameState = 'loss';
-			if (browser) {
-				localStorage.setItem(day, JSON.stringify({ revealed, gameState, guesses }));
-			}
 		}
 
 		answer = '';

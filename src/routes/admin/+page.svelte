@@ -74,7 +74,7 @@
 						</td>
 						<td>
 							<a href={`/play/?day=${game.id}`}>
-								<button class="cursor-pointer bg-blue-500 p-2 hover:bg-blue-600">Play</button>
+								<button class="cursor-pointer bg-purple-500 p-2 hover:bg-purple-600">Play</button>
 							</a>
 						</td>
 					</tr>
