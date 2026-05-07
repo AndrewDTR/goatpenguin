@@ -195,7 +195,7 @@
 			<div class="mt-4">
 				{#each categories as category, idx (category)}
 					<div
-						class={`${idx == revealed - 1 ? 'font-bold' : ''} flex h-12 w-full items-center justify-center border border-indigo-500 text-white italic ${bgClass[500 + idx * 100]}`}
+						class={`${idx == revealed - 1 ? 'font-bold' : ''} flex h-12 w-full items-center justify-center border border-indigo-500 px-4 text-center text-white italic ${bgClass[500 + idx * 100]}`}
 					>
 						{idx <= revealed - 1 ? category : '???'}
 					</div>
