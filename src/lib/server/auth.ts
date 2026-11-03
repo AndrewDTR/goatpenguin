@@ -6,7 +6,7 @@ export function adminToken(): string | null {
 	return createHmac('sha256', env.ADMIN_PASS).update('admin').digest('hex');
 }
 
-export function isAuthed(cookieValue: string | undefined): boolean {
+export function isAuthed(cookieValue: string | undefined | null): boolean {
 	const expected = adminToken();
 	if (!expected || !cookieValue) return false;
 	const a = Buffer.from(cookieValue);
